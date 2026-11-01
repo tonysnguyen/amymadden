@@ -1,0 +1,28 @@
+# Old Squarespace URLs -> new pages.
+# Used by Netlify / Cloudflare Pages. GitHub Pages ignores this file.
+/about  /about.html  301
+/contact  /contact.html  301
+/chalk-cover  /chalk-art.html  301
+/moments-cover  /moments.html  301
+/adventures-cover  /adventures.html  301
+/adventures  /  301
+/v2_cover  /  301
+/events  /chalk-art.html  301
+/events/*  /chalk-art.html  301
+/astronaut  /chalk-art.html  301
+/velvetcat  /chalk-art.html  301
+/grapes  /chalk-art.html  301
+/black-white-face  /chalk-art.html  301
+/blue-bird  /chalk-art.html  301
+/flowerhead  /chalk-art.html  301
+/dog-fruit-nose  /chalk-art.html  301
+/dog-fish  /chalk-art.html  301
+/make-up-mask  /chalk-art.html  301
+/major  /moments.html  301
+/gear-head  /moments.html  301
+/campingfamily-fun  /moments.html  301
+/vietnam-2017  /adventures.html  301
+/vietnam-2019  /adventures.html  301
+/california-washington  /adventures.html  301
+/ojai-ca  /adventures.html  301
+/paso-robles-ca  /adventures.html  301

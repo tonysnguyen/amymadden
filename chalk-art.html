@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chalk Art · Madden's Adventures</title>
+<meta name="description" content="Chalk art street paintings from festivals since 1999, including the People’s Choice winning Velvet Cat.">
+<meta name="theme-color" content="#F8FAFB">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Madden's Adventures">
+<meta property="og:title" content="Chalk Art · Madden's Adventures">
+<meta property="og:description" content="Chalk art street paintings from festivals since 1999, including the People’s Choice winning Velvet Cat.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=Poppins:wght@300;400;500;600&amp;display=swap">
+  <style>
+*{box-sizing:border-box}
+body{margin:0;background:#F8FAFB;color:#173350;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid #375CF0;outline-offset:3px}
+
+/* ---------- shared chrome v2 ---------- */
+.hdr{position:sticky;top:0;z-index:30;background:rgba(248,250,251,.72);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(23,51,80,.10)}
+.hdr-in{height:56px;max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:inline-flex;align-items:center;gap:6px;font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:700;font-size:19px;letter-spacing:-0.01em;color:#173350;text-decoration:none;white-space:nowrap;line-height:1}
+.logo-dot{width:7px;height:7px;border-radius:50%;background:#F6C453;flex:none}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{position:relative;font-family:'Poppins',sans-serif;font-weight:400;font-size:14px;color:rgba(23,51,80,.82);text-decoration:none;line-height:1;padding:8px 0}
+@media (hover: hover) { .nav a:hover {color:#173350} }
+.nav a[aria-current]{font-weight:500;color:#173350}
+.nav a[aria-current]::after{content:"";position:absolute;left:50%;bottom:-6px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#F6C453}
+.hdr-right{display:flex;align-items:center;gap:10px}
+.hdr-ig{width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#173350;text-decoration:none;transition:background-color .2s ease}
+@media (hover: hover) { .hdr-ig:hover {background:rgba(23,51,80,.07)} }
+.hdr-cta{display:inline-flex;align-items:center;height:36px;padding:0 18px;border-radius:999px;background:#375CF0;color:#FFFFFF;font-family:'Poppins',sans-serif;font-weight:500;font-size:14px;text-decoration:none;white-space:nowrap}
+@media (hover: hover) { .hdr-cta:hover {background:#2546D0} }
+.menu-btn{display:none;width:44px;height:44px;border-radius:50%;border:0;background:transparent;color:#173350;align-items:center;justify-content:center;cursor:pointer}
+@media (hover: hover) { .menu-btn:hover {background:rgba(23,51,80,.07)} }
+.sheet{max-width:1240px;margin:0 auto;padding:8px clamp(16px,4vw,40px) 28px;display:flex;flex-direction:column;gap:4px}
+.sheet-link{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:700;font-size:28px;letter-spacing:-0.02em;color:#173350;text-decoration:none;padding:8px 0;display:flex;align-items:center;gap:10px}
+.sheet-link[aria-current]::after{content:"";width:7px;height:7px;border-radius:50%;background:#F6C453}
+.sheet-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px;padding-top:18px;border-top:1px solid rgba(23,51,80,.10)}
+.sheet-soc{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(23,51,80,.18);color:#173350;font-family:'Poppins',sans-serif;font-size:14px;text-decoration:none}
+.sheet-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;background:#375CF0;color:#FFFFFF;font-family:'Poppins',sans-serif;font-weight:500;font-size:15px;text-decoration:none}
+@media (max-width:899px){
+  .nav,.hdr-cta{display:none}
+  .menu-btn{display:inline-flex}
+}
+@media (min-width:900px){ .sheet{display:none} }
+
+.ftr{background:#173350;color:#FFFFFF;margin-top:0;padding:72px 0 40px}
+.ftr-in{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.ftr-top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 32px}
+.ftr .logo{color:#FFFFFF}
+.ftr-line{font-family:'Poppins',sans-serif;font-weight:300;font-size:15px;color:#C4D0DA;margin:0}
+.ftr-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:48px}
+.ftr-h{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#FFFFFF;margin:0 0 14px}
+.ftr-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.ftr-list a{font-family:'Poppins',sans-serif;font-size:14px;color:#C4D0DA;text-decoration:none}
+@media (hover: hover) { .ftr-list a:hover {color:#FFFFFF} }
+.ftr-rule{height:1px;background:rgba(255,255,255,.12);margin:48px 0 20px;border:0}
+.ftr-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-family:'Poppins',sans-serif;font-size:13px;color:#C4D0DA}
+.ftr-chalk{color:#F6C453}
+@media (max-width:899px){ .ftr-grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+
+/* ---------- type ---------- */
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#3F5873;margin:0}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:#F6C453}
+.display{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:700;letter-spacing:-0.035em;line-height:.98;font-size:clamp(52px,7.2vw,104px);color:#173350;margin:0}
+.headline{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:700;letter-spacing:-0.03em;line-height:1.02;font-size:clamp(36px,4.6vw,64px);color:#173350;margin:0}
+.lead{font-family:'Poppins',sans-serif;font-weight:300;font-size:clamp(19px,1.7vw,22px);line-height:1.6;color:#173350;margin:0}
+.small{font-family:'Poppins',sans-serif;font-weight:300;font-size:15px;line-height:1.65;color:#3F5873;margin:0}
+.sq{position:relative;display:inline-block;white-space:nowrap}
+.sq svg{position:absolute;left:-2%;bottom:-.16em;width:104%;height:.26em;overflow:visible}
+
+/* ---------- intro ---------- */
+.intro{padding:128px 0 72px}
+.intro-col{max-width:760px;display:flex;flex-direction:column;gap:28px}
+.facts{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-top:8px;font-family:'Poppins',sans-serif;font-weight:500;font-size:14px;color:#173350}
+.fact{display:inline-flex;align-items:center;gap:8px}
+.fact-dot{width:7px;height:7px;border-radius:50%}
+.fact-medal{width:16px;height:auto;transform:rotate(-10deg)}
+.fact-sep{color:#3F5873}
+
+/* ---------- controls ---------- */
+.controls{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
+.seg{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:4px;border-radius:999px;background:#EEF2F3;box-shadow:inset 0 0 0 1px rgba(23,51,80,.08);width:min(468px,100%)}
+.seg-pill{position:absolute;top:4px;left:4px;bottom:4px;width:calc((100% - 8px) / 3);border-radius:999px;background:#173350;box-shadow:0 6px 16px -8px rgba(23,51,80,.6)}
+.seg-btn{position:relative;z-index:1;height:40px;border:0;background:transparent;border-radius:999px;cursor:pointer;font-family:'Poppins',sans-serif;font-weight:500;font-size:15px;color:#173350;white-space:nowrap;padding:0 14px}
+.seg-btn.is-on{color:#FFFFFF}
+.count{display:inline-flex;align-items:center;gap:8px;font-family:'Poppins',sans-serif;font-weight:500;font-size:14px;color:#3F5873}
+.count-dot{width:6px;height:6px;border-radius:50%;background:#7FD1B9}
+
+/* ---------- the wall ---------- */
+.wall{background:#173350;border-radius:28px;padding:clamp(20px,3vw,40px)}
+.wall-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-flow:dense;gap:20px}
+@media (max-width:899px){ .wall-grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:560px){ .wall-grid{grid-template-columns:minmax(0,1fr)} }
+.tile{position:relative;display:flex;flex-direction:column;gap:14px;text-align:left;border:0;background:transparent;padding:0;cursor:pointer;color:#FFFFFF;border-radius:22px}
+.tile-media{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#0E1F33;box-shadow:0 0 0 1px rgba(255,255,255,.06)}
+.tile-media img{width:100%;height:100%;object-fit:cover}
+.tile.is-open .tile-media{box-shadow:0 0 0 2px #F6C453}
+.tile-cap{display:flex;flex-direction:column;gap:4px;padding:0 4px 4px}
+.tile-row{display:flex;align-items:center;flex-wrap:wrap;gap:8px 10px}
+.tile-title{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:650;font-size:24px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF}
+.tile-meta{font-family:'Poppins',sans-serif;font-weight:400;font-size:14px;color:#C4D0DA}
+.tile-open-dot{width:7px;height:7px;border-radius:50%;background:#F6C453}
+.chip{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;background:#F6C453;color:#173350;font-family:'Poppins',sans-serif;font-weight:500;font-size:12px;white-space:nowrap}
+.medal{position:absolute;top:-14px;right:-8px;width:58px;height:auto;transform:rotate(12deg);z-index:2;filter:drop-shadow(0 6px 14px rgba(246,196,83,.35));pointer-events:none}
+
+/* ---------- viewer (shared component) ---------- */
+.detail{grid-column:1 / -1}
+.viewer{background:#0E1F33;border-radius:28px;padding:28px;color:#FFFFFF}
+.vw-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+.vw-eyebrow{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#C4D0DA;margin:0 0 4px;display:flex;align-items:center;gap:8px}
+.vw-eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:#F6C453}
+.vw-title{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:650;font-size:24px;letter-spacing:-0.02em;color:#FFFFFF;margin:0;line-height:1.15}
+.vw-right{display:flex;align-items:center;gap:14px}
+.vw-counter{font-family:'Poppins',sans-serif;font-weight:500;font-size:14px;color:#C4D0DA;font-variant-numeric:tabular-nums}
+.vw-close{width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background-color .2s ease}
+@media (hover: hover) { .vw-close:hover {background:rgba(255,255,255,.22)} }
+.vw-body{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;align-items:start}
+@media (max-width:1100px){ .vw-body{grid-template-columns:minmax(0,1fr)} }
+.vw-main{display:flex;flex-direction:column;gap:16px;min-width:0}
+.stage{position:relative;height:600px;display:flex;align-items:center;justify-content:center;border-radius:18px;background:rgba(255,255,255,.03)}
+@media (max-width:899px){ .stage{height:460px} }
+.stage-img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:14px}
+.nav-arrow{position:absolute;top:50%;margin-top:-24px;width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background-color .2s ease}
+@media (hover: hover) { .nav-arrow:hover {background:rgba(255,255,255,.26)} }
+.nav-prev{left:12px}
+.nav-next{right:12px}
+.strip{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 6px}
+.thumb{flex:none;width:64px;height:64px;padding:0;border:0;border-radius:10px;overflow:hidden;background:#173350;cursor:pointer;transition:opacity .2s ease,box-shadow .2s ease}
+.thumb img{width:100%;height:100%;object-fit:cover}
+@media (hover: hover) { .thumb:hover {opacity:1 !important} }
+.vw-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;font-family:'Poppins',sans-serif;font-size:14px;color:#C4D0DA}
+.vw-full{color:#C4D0DA;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(196,208,218,.4);display:inline-flex;align-items:center;min-height:44px}
+@media (hover: hover) { .vw-full:hover {color:#FFFFFF;text-decoration-color:#F6C453} }
+.vw-side{display:flex;flex-direction:column;gap:22px;padding-top:4px}
+.specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px;margin:0}
+.spec{margin:0}
+.spec-k{font-family:'Archivo',sans-serif;font-stretch:75%;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#C4D0DA;margin:0 0 4px}
+.spec-v{font-family:'Poppins',sans-serif;font-weight:400;font-size:15px;line-height:1.45;color:#FFFFFF;margin:0}
+.vw-rule{height:1px;background:rgba(255,255,255,.12);border:0;margin:0}
+.story{font-family:'Poppins',sans-serif;font-weight:300;font-size:16px;line-height:1.65;color:#FFFFFF;margin:0}
+.links{display:flex;flex-direction:column;gap:6px}
+.vw-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:#FFFFFF;font-family:'Poppins',sans-serif;font-weight:500;font-size:14px;text-decoration:underline;text-decoration-color:#F6C453;text-underline-offset:5px;text-decoration-thickness:2px}
+@media (hover: hover) { .vw-link:hover {color:#F6C453} }
+
+/* ---------- keep exploring ---------- */
+.explore{padding:136px 0 136px}
+.explore-head{display:flex;flex-direction:column;gap:16px;margin-bottom:40px}
+.explore-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:24px}
+.go-tile{display:flex;flex-direction:column;background:#FFFFFF;border-radius:28px;overflow:hidden;text-decoration:none;color:#173350;box-shadow:0 1px 1px rgba(23,51,80,.04),0 18px 40px -18px rgba(23,51,80,.28)}
+.go-media{aspect-ratio:3/2;overflow:hidden;background:#DDE4E7}
+.go-media img{width:100%;height:100%;object-fit:cover}
+.go-body{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding:26px 28px 30px}
+.go-title{font-family:'Archivo',sans-serif;font-stretch:100%;font-weight:650;font-size:28px;letter-spacing:-0.02em;margin:0 0 8px;line-height:1.1}
+.go-text{font-family:'Poppins',sans-serif;font-weight:300;font-size:16px;line-height:1.6;color:#3F5873;margin:0;max-width:440px}
+.go-arrow{flex:none;width:48px;height:48px;border-radius:50%;background:#375CF0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center}
+
+/* ---------- motion ---------- */
+@keyframes rise { from { opacity: 0; translate: 0 24px; } to { opacity: 1; translate: 0 0; } }
+@keyframes openIn{from{opacity:0;transform:translateY(16px) scale(.99)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+  .seg-pill{transition:transform .42s cubic-bezier(.2,.8,.2,1)}
+  .seg-btn{transition:color .3s cubic-bezier(.2,.8,.2,1)}
+  .tile{transition:transform .38s cubic-bezier(.2,.8,.2,1)}
+  .tile-media{transition:box-shadow .38s cubic-bezier(.2,.8,.2,1)}
+  .tile-media img{transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+  .tile:focus-visible {transform:scale(1.015)} @media (hover: hover) { .tile:hover {transform:scale(1.015)} }
+  .tile:focus-visible .tile-media {box-shadow:0 0 0 1px rgba(255,255,255,.14),0 24px 60px -24px rgba(246,196,83,.45)} @media (hover: hover) { .tile:hover .tile-media {box-shadow:0 0 0 1px rgba(255,255,255,.14),0 24px 60px -24px rgba(246,196,83,.45)} }
+  @media (hover: hover) { .tile.is-open:hover .tile-media {box-shadow:0 0 0 2px #F6C453,0 24px 60px -24px rgba(246,196,83,.45)} }
+  .tile:focus-visible .tile-media img {transform:scale(1.04)} @media (hover: hover) { .tile:hover .tile-media img {transform:scale(1.04)} }
+  .go-tile{transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s cubic-bezier(.2,.8,.2,1)}
+  .go-media img{transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+  .go-tile:focus-visible {transform:scale(1.015);box-shadow:0 1px 1px rgba(23,51,80,.04),0 28px 60px -22px rgba(23,51,80,.38)} @media (hover: hover) { .go-tile:hover {transform:scale(1.015);box-shadow:0 1px 1px rgba(23,51,80,.04),0 28px 60px -22px rgba(23,51,80,.38)} }
+  @media (hover: hover) { .go-tile:hover .go-media img {transform:scale(1.04)} }
+  .open-anim{animation:openIn .36s cubic-bezier(.2,.8,.2,1) both}
+  @supports (animation-timeline: view()){
+    .reveal{animation:rise both;animation-timeline:view();animation-range:entry 0% cover 25%}
+  }
+}
+  
+/* ===== touch & phone layer (mobile UX pass) ===== */
+sc-if, sc-for { display: contents; }
+a, button, input, textarea, select, label { touch-action: manipulation; }
+a, button { -webkit-tap-highlight-color: transparent; }
+@media (hover: none) and (prefers-reduced-motion: no-preference) {
+  .tile:active, .ch:active, .trip:active, .rt:active, .go-tile:active, .next:active, .pill:active, .send:active, .sheet-cta:active, .hdr-cta:active, .seg-btn:active, .thumb:active, .v-thumb:active { transform: scale(.97); transition: transform .12s ease; }
+}
+@media (max-width: 560px) {
+  .display { font-size: clamp(38px, 11vw, 52px); }
+  .headline { font-size: clamp(30px, 8.6vw, 40px); }
+  .lead { font-size: 18px; line-height: 1.6; }
+  .ftr { padding: 56px 0 32px; }
+  .ftr-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 32px; padding-bottom: 32px; }
+  .ftr-grid a, .ftr-list a { display: block; padding: 9px 0; }
+  .ftr-list { gap: 0; }
+  .ftr-rule { margin: 32px 0 18px; }
+  .sheet-links a, .sheet-link { font-size: 26px; }
+}
+
+/* ===== phone-friendly viewer ===== */
+.stage, .v-stage { touch-action: pan-y; -webkit-user-select: none; user-select: none; }
+.stage-img, .v-img { -webkit-user-drag: none; -webkit-touch-callout: none; pointer-events: none; }
+[data-viewer] { scroll-margin-top: 68px; }
+.swipe-hint { display: none; }
+@media (max-width: 640px) {
+  .viewer { padding: 14px; border-radius: 22px; }
+  .stage, .v-stage { height: auto; aspect-ratio: 4 / 5; border-radius: 14px; }
+  .nav-arrow, .v-nav { top: auto; bottom: 10px; margin-top: 0; width: 44px; height: 44px; }
+  .nav-prev, .v-prev { left: 10px; }
+  .nav-next, .v-next { right: 10px; }
+  .thumb, .v-thumb { width: 52px; height: 52px; scroll-snap-align: center; }
+  .strip, .v-strip { scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
+  .vw-title, .v-title { font-size: 20px; }
+  .vw-top { margin-bottom: 14px; gap: 10px; }
+  .vw-right, .v-tools { gap: 8px; }
+  .vw-body, .v-body { gap: 20px; }
+  .v-body { margin-top: 14px; }
+  .swipe-hint { display: inline; }
+}
+
+@media (max-width: 560px) {
+  .intro { padding: 48px 0 40px; }
+  .intro-col { gap: 20px; }
+  .controls { margin-bottom: 16px; gap: 12px; }
+  .seg { width: 100%; }
+  .seg-btn { height: 44px; font-size: 14px; padding: 0 6px; }
+  .wall { margin: 0 calc(-1 * clamp(16px, 4vw, 40px)); border-radius: 0; padding: 16px 12px 24px; }
+  .wall-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 10px; }
+  .tile { gap: 8px; border-radius: 16px; }
+  .tile-media { border-radius: 14px; }
+  .tile-cap { padding: 0 2px; gap: 2px; }
+  .tile-row { gap: 4px 6px; }
+  .tile-title { font-size: 16px; }
+  .tile-meta { font-size: 12.5px; line-height: 1.35; }
+  .tile-row .chip { height: 20px; padding: 0 7px; font-size: 11px; }
+  .medal { width: 40px; top: -8px; right: -4px; }
+  .explore { padding: 72px 0 88px; }
+  .explore-head { margin-bottom: 20px; }
+  .go-tile { border-radius: 22px; }
+  .go-body { padding: 18px 20px 22px; }
+  .go-title { font-size: 24px; }
+  .go-arrow { width: 44px; height: 44px; }
+}
+
+/* ===== shared site chrome (one header, menu and footer for every page) ===== */
+.sh-hdr { position: sticky; top: 0; z-index: 40; background: rgba(248,250,251,.8); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(23,51,80,.10); view-transition-name: site-header; }
+.sh-in { max-width: 1240px; height: 56px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.sh-logo { display: inline-flex; align-items: center; gap: 6px; font-family: 'Archivo', sans-serif; font-stretch: 75%; font-weight: 700; font-size: 19px; line-height: 1; letter-spacing: -0.01em; color: #173350; text-decoration: none; white-space: nowrap; }
+.sh-dot { width: 7px; height: 7px; border-radius: 50%; background: #F6C453; flex: none; }
+.sh-nav { display: flex; align-items: center; gap: 30px; }
+.sh-nav a { position: relative; padding: 8px 0; font: 400 14px/1.2 'Poppins', sans-serif; color: rgba(23,51,80,.78); text-decoration: none; transition: color .2s ease; }
+.sh-nav a[aria-current] { font-weight: 500; color: #173350; }
+.sh-nav a[aria-current]::after { content: ""; position: absolute; left: 50%; top: calc(100% - 1px); width: 5px; height: 5px; margin-left: -2.5px; border-radius: 50%; background: #F6C453; }
+.sh-r { display: flex; align-items: center; gap: 8px; }
+.sh-ic { width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #173350; text-decoration: none; transition: background-color .2s ease; }
+.sh-cta { display: inline-flex; align-items: center; justify-content: center; height: 36px; padding: 0 18px; border-radius: 999px; background: #375CF0; color: #FFFFFF; font: 500 14px/1 'Poppins', sans-serif; text-decoration: none; white-space: nowrap; transition: background-color .2s ease, transform .2s ease; }
+.sh-cta[aria-current] { background: #173350; }
+.sh-menu { display: none; position: relative; width: 44px; height: 44px; margin-right: -8px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: #173350; cursor: pointer; }
+.sh-bar { position: absolute; left: 13px; width: 18px; height: 1.75px; border-radius: 2px; background: currentColor; transition: transform .34s cubic-bezier(.2,.8,.2,1); }
+.sh-bar.b1 { top: 18.5px; } .sh-bar.b2 { top: 24px; }
+.sh-menu[aria-expanded="true"] .b1 { transform: translateY(2.75px) rotate(45deg); }
+.sh-menu[aria-expanded="true"] .b2 { transform: translateY(-2.75px) rotate(-45deg); }
+.sh-sheet { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .42s cubic-bezier(.2,.8,.2,1); }
+.sh-sheet.is-open { grid-template-rows: 1fr; }
+.sh-sheet-in { min-height: 0; overflow: hidden; }
+.sh-sheet:not(.is-open) .sh-sheet-in { visibility: hidden; transition: visibility 0s .42s; }
+.sh-pad { max-width: 1240px; margin: 0 auto; padding: 4px clamp(16px, 4vw, 40px) 24px; max-height: calc(100dvh - 56px); overflow-y: auto; overscroll-behavior: contain; }
+.sh-links { display: flex; flex-direction: column; }
+.sh-links a { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 58px; border-bottom: 1px solid rgba(23,51,80,.08); font-family: 'Archivo', sans-serif; font-stretch: 100%; font-weight: 700; font-size: 28px; letter-spacing: -0.02em; color: #173350; text-decoration: none; }
+.sh-links a svg { color: rgba(23,51,80,.4); flex: none; }
+.sh-links a span { display: inline-flex; align-items: center; gap: 10px; }
+.sh-links a[aria-current] span::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #F6C453; }
+.sh-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 20px; }
+.sh-cta-lg { height: 44px; padding: 0 22px; font-size: 15px; }
+.sh-soc { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(23,51,80,.18); color: #173350; font: 500 14px/1 'Poppins', sans-serif; text-decoration: none; }
+.sh-scrim { position: fixed; inset: 0; z-index: 35; display: block; width: 100%; padding: 0; border: 0; margin: 0; background: rgba(14,31,51,.28); opacity: 0; pointer-events: none; cursor: default; transition: opacity .3s ease; }
+.sh-scrim.is-open { opacity: 1; pointer-events: auto; }
+@media (hover: hover) {
+  .sh-nav a:hover { color: #173350; }
+  .sh-ic:hover { background: rgba(23,51,80,.07); }
+  .sh-cta:hover { background: #2546D0; }
+  .sh-cta[aria-current]:hover { background: #0E1F33; }
+  .sh-menu:hover { background: rgba(23,51,80,.07); }
+  .sh-links a:hover svg { color: #173350; }
+  .sh-soc:hover { background: rgba(23,51,80,.05); }
+}
+@media (max-width: 899px) { .sh-nav, .sh-r > .sh-cta { display: none; } .sh-menu { display: inline-flex; } }
+@media (min-width: 900px) { .sh-sheet, .sh-scrim { display: none; } }
+@media (max-width: 560px) { .sh-links a { font-size: 26px; min-height: 54px; } }
+@media (prefers-reduced-motion: no-preference) {
+  .sh-sheet.is-open .sh-links a, .sh-sheet.is-open .sh-row { animation: shIn .42s cubic-bezier(.2,.8,.2,1) backwards; }
+  .sh-sheet.is-open .sh-links a:nth-child(2) { animation-delay: .03s; }
+  .sh-sheet.is-open .sh-links a:nth-child(3) { animation-delay: .06s; }
+  .sh-sheet.is-open .sh-links a:nth-child(4) { animation-delay: .09s; }
+  .sh-sheet.is-open .sh-links a:nth-child(5) { animation-delay: .12s; }
+  .sh-sheet.is-open .sh-row { animation-delay: .15s; }
+  @keyframes shIn { from { opacity: 0; translate: 0 -8px; } }
+}
+@media (prefers-reduced-motion: reduce) { .sh-sheet, .sh-bar, .sh-scrim { transition: none; } }
+
+.sf { background: #173350; color: #C4D0DA; padding: 72px 0 36px; }
+.sf-in { max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+.sf-top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px 32px; }
+.sf .sh-logo { color: #FFFFFF; font-size: 22px; }
+.sf-line { margin: 0; font: 300 15px/1.5 'Poppins', sans-serif; color: #C4D0DA; }
+.sf-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 48px; }
+.sf-h { margin: 0 0 10px; font-family: 'Archivo', sans-serif; font-stretch: 75%; font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #FFFFFF; }
+.sf-grid a { display: block; padding: 6px 0; font: 400 14px/1.5 'Poppins', sans-serif; color: #C4D0DA; text-decoration: none; transition: color .2s ease; }
+.sf-bot { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; margin-top: 48px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.12); font: 400 13px/1.5 'Poppins', sans-serif; }
+.sf-chalk { color: #F6C453; }
+.sf-up { margin-left: auto; display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF; font-weight: 500; text-decoration: none; }
+@media (hover: hover) { .sf-grid a:hover, .sf-up:hover { color: #F6C453; } }
+@media (max-width: 760px) { .sf-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) {
+  .sf { padding: 56px 0 24px; }
+  .sf-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 32px; }
+  .sf-grid a { padding: 9px 0; }
+  .sf-bot { margin-top: 32px; }
+}
+
+/* ===== page transitions ===== */
+@view-transition { navigation: auto; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .pg-in { animation: pgIn .55s cubic-bezier(.2,.8,.2,1) backwards; }
+  @keyframes pgIn { from { opacity: 0; translate: 0 10px; } }
+  ::view-transition-old(root) { animation: vtOut .2s ease both; }
+  ::view-transition-new(root) { animation: vtIn .36s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes vtOut { to { opacity: 0; } }
+  @keyframes vtIn { from { opacity: 0; translate: 0 8px; } }
+}
+@media (prefers-reduced-motion: reduce) { ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; } }
+@media (hover: none) and (prefers-reduced-motion: no-preference) { .nx-card:active, .sh-cta:active, .sh-soc:active { transform: scale(.98); transition: transform .12s ease; } }
+
+/* ===== viewer motion & focus ===== */
+.viewer:focus { outline: none; }
+.viewer:focus-visible { outline: 3px solid #F6C453; outline-offset: 3px; }
+.pre { display: none !important; }
+@media (prefers-reduced-motion: no-preference) {
+  .viewer.is-closing { animation: vwOut .19s cubic-bezier(.4,0,1,1) both; }
+  @keyframes vwOut { to { opacity: 0; translate: 0 10px; } }
+  .ph-n0 { animation: phN0 .38s cubic-bezier(.2,.8,.2,1) both; } .ph-n1 { animation: phN1 .38s cubic-bezier(.2,.8,.2,1) both; }
+  .ph-p0 { animation: phP0 .38s cubic-bezier(.2,.8,.2,1) both; } .ph-p1 { animation: phP1 .38s cubic-bezier(.2,.8,.2,1) both; }
+  .ph-j0 { animation: phJ0 .32s cubic-bezier(.2,.8,.2,1) both; } .ph-j1 { animation: phJ1 .32s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes phN0 { from { opacity: 0; translate: 32px 0; } to { opacity: 1; translate: 0 0; } }
+  @keyframes phN1 { from { opacity: 0; translate: 32px 0; } to { opacity: 1; translate: 0 0; } }
+  @keyframes phP0 { from { opacity: 0; translate: -32px 0; } to { opacity: 1; translate: 0 0; } }
+  @keyframes phP1 { from { opacity: 0; translate: -32px 0; } to { opacity: 1; translate: 0 0; } }
+  @keyframes phJ0 { from { opacity: 0; scale: .97; } to { opacity: 1; scale: 1; } }
+  @keyframes phJ1 { from { opacity: 0; scale: .97; } to { opacity: 1; scale: 1; } }
+  .wall-grid.ga0 .tile { animation: gA .42s cubic-bezier(.2,.8,.2,1) backwards; }
+  .wall-grid.ga1 .tile { animation: gB .42s cubic-bezier(.2,.8,.2,1) backwards; }
+  @keyframes gA { from { opacity: 0; translate: 0 12px; } }
+  @keyframes gB { from { opacity: 0; translate: 0 12px; } }
+}
+</style>
+<style>sc-if, sc-for { display: contents; } #dc-root:empty { min-height: 100vh; background: #F8FAFB; }</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<noscript><p style="font-family:sans-serif;padding:24px;max-width:640px">This site needs JavaScript turned on to show Amy’s chalk art and photos.</p></noscript>
+<template id="dc-template"><div style="background:#F8FAFB; font-family:'Poppins',sans-serif; color:#173350;">
+
+  <!-- Header -->
+  <header class="sh-hdr" id="top" onKeyDown="{{sh.key}}">
+    <div class="sh-in">
+      <a class="sh-logo" href="index.html">Madden's Adventures<span class="sh-dot" aria-hidden="true"></span></a>
+      <nav class="sh-nav" aria-label="Main"><a href="about.html">About</a><a href="chalk-art.html" aria-current="page">Chalk Art</a><a href="moments.html">Moments</a><a href="adventures.html">Adventures</a></nav>
+      <div class="sh-r">
+        <a class="sh-ic" href="https://www.instagram.com/majorsquest/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5v.01"></path></svg></a>
+        <a class="sh-cta" href="contact.html">Say hello</a>
+        <button class="sh-menu" type="button" aria-label="{{sh.label}}" aria-expanded="{{sh.exp}}" aria-controls="sh-sheet" onClick="{{sh.toggle}}"><span class="sh-bar b1" aria-hidden="true"></span><span class="sh-bar b2" aria-hidden="true"></span></button>
+      </div>
+    </div>
+    <div class="sh-sheet {{sh.cls}}" id="sh-sheet">
+      <div class="sh-sheet-in"><div class="sh-pad">
+        <nav class="sh-links" aria-label="Menu"><a href="index.html"><span>Home</span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></a><a href="about.html"><span>About</span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></a><a href="chalk-art.html" aria-current="page"><span>Chalk Art</span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></a><a href="moments.html"><span>Moments</span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></a><a href="adventures.html"><span>Adventures</span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></a></nav>
+        <div class="sh-row">
+          <a class="sh-cta sh-cta-lg" href="contact.html">Say hello</a>
+          <a class="sh-soc" href="https://www.instagram.com/majorsquest/" target="_blank" rel="noopener"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5v.01"></path></svg>Instagram</a>
+          <a class="sh-soc" href="https://www.linkedin.com/in/amy-madden-b2183a4/" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a2.5 2.5 0 0 1 5 0V17"></path></svg>LinkedIn</a>
+        </div>
+      </div></div>
+    </div>
+  </header>
+  <button class="sh-scrim {{sh.cls}}" type="button" tabindex="-1" aria-label="Close menu" onClick="{{sh.close}}"></button>
+
+  <main class="pg-in">
+    <!-- Intro -->
+    <section class="intro">
+      <div class="wrap">
+        <div class="intro-col reveal">
+          <p class="eyebrow">Chalk Art Festivals</p>
+          <h1 class="display">Less talk, more <span class="sq">chalk.<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 30 4, 52 18, 80 10 S 130 4, 156 11 S 188 14, 197 7" fill="none" stroke="#F6C453" stroke-width="5" stroke-linecap="round"></path></svg></span></h1>
+          <p class="lead">Chalk is what I would call my “art medium of choice.” It is something about the texture, feeling the chalk through your finger tips hitting the pavement to create beauty is almost like magic. I’ve participated in chalk art street painting festivals since 1999 and had the opportunity to meet some amazing artists along the way. Thank you to my friends, family, art teachers and fellow artists over the years who have supported me at the festivals. Your support keeps me wanting to continue in this joy.</p>
+          <p class="small">Festival participation is for non-profits to promote creating artwork for all to enjoy. Some festivals provide a small artist stipend for participating to assist with travel costs to get to the festival. Original artists credited if known and listed below.</p>
+          <div class="facts">
+            <span class="fact"><span class="fact-dot" style="background:#F6C453;" aria-hidden="true"></span>Since 1999</span>
+            <span class="fact-sep" aria-hidden="true">·</span>
+            <span class="fact"><span class="fact-dot" style="background:#F39BB0;" aria-hidden="true"></span>9 pieces</span>
+            <span class="fact-sep" aria-hidden="true">·</span>
+            <span class="fact"><img class="fact-medal" src="assets/img/award-medal.webp" alt="" aria-hidden="true">People’s Choice Award 2023</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls + wall -->
+    <section aria-label="Chalk art pieces">
+      <div class="wrap">
+        <div class="controls">
+          <div class="seg" role="group" aria-label="Filter pieces">
+            <span class="seg-pill" style="transform:translateX({{pillX}});" aria-hidden="true"></span>
+            <sc-for list="{{segs}}" as="f" hint-placeholder-count="3">
+              <button class="seg-btn {{f.cls}}" type="button" aria-pressed="{{f.pressed}}" onClick="{{f.pick}}">{{f.label}}</button>
+            </sc-for>
+          </div>
+          <p class="count" aria-live="polite" style="margin:0;"><span class="count-dot" aria-hidden="true"></span>{{countLabel}}</p>
+        </div>
+
+        <div class="wall">
+          <div class="wall-grid {{gridAnim}}">
+            <sc-for list="{{pieces}}" as="p" hint-placeholder-count="9">
+              <button class="tile {{p.tileCls}}" data-card="{{p.id}}" type="button" aria-expanded="{{p.expanded}}" aria-label="{{p.ariaLabel}}" onClick="{{p.toggle}}">
+                <span class="tile-media"><img loading="lazy" decoding="async" src="{{p.cover}}" alt="{{p.alt}}"></span>
+                <sc-if value="{{p.award}}" hint-placeholder-val="{{ false }}">
+                  <img loading="lazy" decoding="async" class="medal" src="assets/img/award-medal.webp" alt="" aria-hidden="true">
+                </sc-if>
+                <span class="tile-cap">
+                  <span class="tile-row">
+                    <span class="tile-title">{{p.title}}</span>
+                    <sc-if value="{{p.award}}" hint-placeholder-val="{{ false }}">
+                      <span class="chip">People’s Choice</span>
+                    </sc-if>
+                    <sc-if value="{{p.isOpen}}" hint-placeholder-val="{{ false }}">
+                      <span class="tile-open-dot" aria-hidden="true"></span>
+                    </sc-if>
+                  </span>
+                  <span class="tile-meta">{{p.meta}}</span>
+                </span>
+              </button>
+              <sc-if value="{{p.isOpen}}" hint-placeholder-val="{{ false }}">
+                <div class="detail">
+                  <div class="viewer open-anim {{vClosing}}" data-viewer="1" tabindex="-1" onKeyDown="{{v.onKey}}" role="region" aria-label="{{v.regionLabel}}">
+                    <div class="vw-top">
+                      <div>
+                        <p class="vw-eyebrow">{{v.eyebrow}}</p>
+                        <h2 class="vw-title">{{v.title}}</h2>
+                      </div>
+                      <div class="vw-right">
+                        <span class="vw-counter">{{v.counter}}</span>
+                        <button class="vw-close" type="button" aria-label="Close gallery" onClick="{{v.close}}">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="vw-body">
+                      <div class="vw-main">
+                        <div class="stage" onTouchStart="{{v.swStart}}" onTouchEnd="{{v.swEnd}}">
+                          <img class="stage-img {{v.anim}}" src="{{v.src}}" alt="{{v.alt}}"><img class="pre" src="{{v.nextSrc}}" alt="" aria-hidden="true"><img class="pre" src="{{v.prevSrc}}" alt="" aria-hidden="true">
+                          <button class="nav-arrow nav-prev" type="button" aria-label="Previous photo" onClick="{{v.prev}}">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+                          </button>
+                          <button class="nav-arrow nav-next" type="button" aria-label="Next photo" onClick="{{v.next}}">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+                          </button>
+                        </div>
+                        <div class="strip">
+                          <sc-for list="{{v.thumbs}}" as="t" hint-placeholder-count="6">
+                            <button class="thumb" type="button" aria-label="{{t.label}}" aria-current="{{t.current}}" onClick="{{t.go}}" style="opacity:{{t.opacity}}; box-shadow:{{t.ringStyle}};">
+                              <img loading="lazy" decoding="async" src="{{t.src}}" alt="">
+                            </button>
+                          </sc-for>
+                        </div>
+                        <div class="vw-foot">
+                          <span>{{v.showing}}<span class="swipe-hint"> · Swipe to browse</span></span>
+                          <a class="vw-full" href="{{v.src}}" target="_blank" rel="noopener">Full resolution ↗</a>
+                        </div>
+                      </div>
+                      <div class="vw-side">
+                        <dl class="specs">
+                          <sc-for list="{{v.specs}}" as="s" hint-placeholder-count="4">
+                            <div class="spec">
+                              <dt class="spec-k">{{s.k}}</dt>
+                              <dd class="spec-v" style="margin:0;">{{s.v}}</dd>
+                            </div>
+                          </sc-for>
+                        </dl>
+                        <hr class="vw-rule">
+                        <p class="story">{{v.story}}</p>
+                        <sc-if value="{{v.hasLinks}}" hint-placeholder-val="{{ false }}">
+                          <div class="links">
+                            <p class="spec-k">Festival links</p>
+                            <sc-for list="{{v.links}}" as="l" hint-placeholder-count="1">
+                              <a class="vw-link" href="{{l.href}}" target="_blank" rel="noopener">{{l.label}} ↗</a>
+                            </sc-for>
+                          </div>
+                        </sc-if>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </sc-if>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Keep exploring -->
+    <section class="explore">
+      <div class="wrap">
+        <div class="explore-head reveal">
+          <p class="eyebrow">Keep exploring</p>
+        </div>
+        <div class="explore-grid">
+          <a class="go-tile reveal" href="moments.html">
+            <span class="go-media"><img loading="lazy" decoding="async" src="assets/img/moments-card.jpg" alt="A captured moment from Amy's photo collection"></span>
+            <span class="go-body">
+              <span>
+                <span class="go-title" style="display:block;">Moments</span>
+                <span class="go-text" style="display:block;">Come explore the moments captured to tell my visual story.</span>
+              </span>
+              <span class="go-arrow" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+            </span>
+          </a>
+          <a class="go-tile reveal" href="adventures.html">
+            <span class="go-media"><img loading="lazy" decoding="async" src="assets/img/adventures-card.webp" alt="A travel photo from Amy's adventures"></span>
+            <span class="go-body">
+              <span>
+                <span class="go-title" style="display:block;">Adventures</span>
+                <span class="go-text" style="display:block;">Photography of adventures taken both internationally and domestically in the US. Vietnam, CA, WA etc. Let’s explore!</span>
+              </span>
+              <span class="go-arrow" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="sf">
+    <div class="sf-in">
+      <div class="sf-top">
+        <a class="sh-logo" href="index.html">Madden's Adventures<span class="sh-dot" aria-hidden="true"></span></a>
+        <p class="sf-line">Little moments, big adventures.</p>
+      </div>
+      <div class="sf-grid">
+        <div><p class="sf-h">Explore</p><a href="index.html">Home</a><a href="about.html">About</a><a href="chalk-art.html">Chalk Art</a><a href="moments.html">Moments</a><a href="adventures.html">Adventures</a></div>
+        <div><p class="sf-h">Galleries</p><a href="chalk-art.html">Chalk Art Festivals</a><a href="moments.html">Major</a><a href="moments.html">Gear Head</a><a href="adventures.html">Vietnam</a></div>
+        <div><p class="sf-h">Say hello</p><a href="contact.html">Contact</a><a href="https://www.instagram.com/majorsquest/" target="_blank" rel="noopener">Instagram @majorsquest</a><a href="https://www.linkedin.com/in/amy-madden-b2183a4/" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
+      <div class="sf-bot"><span>© 2026 Amy Madden</span><span class="sf-chalk">Less talk, more chalk.</span><a class="sf-up" href="#top">Back to top ↑</a></div>
+    </div>
+  </footer>
+</div>
+</template>
+<script src="assets/js/dc-lite.js"></script>
+<script>
+class Component extends DCLogic {
+  renderVals() {
+    const v = this._pageVals();
+    const open = !!(this.state && this.state.shOpen);
+    v.sh = {
+      cls: open ? 'is-open' : '',
+      exp: open ? 'true' : 'false',
+      label: open ? 'Close menu' : 'Open menu',
+      toggle: () => this.setState({ shOpen: !open }),
+      close: () => this.setState({ shOpen: false }),
+      key: (e) => { if (e && e.key === 'Escape' && open) this.setState({ shOpen: false }); }
+    };
+    return v;
+  }
+
+  _narrow() { try { return !!(window.matchMedia && window.matchMedia('(max-width: 700px)').matches); } catch (e) { return false; } }
+  componentDidMount() { if (super.componentDidMount) super.componentDidMount(); this._lastOpen = this._openNow; }
+  componentDidUpdate(a, b, c) {
+    if (super.componentDidUpdate) super.componentDidUpdate(a, b, c);
+    const cur = this._openNow;
+    if (cur && cur !== this._lastOpen) { this._reveal(); this._focusViewer(); }
+    else if (!cur && this._lastOpen) { this._returnToCard(this._lastOpen); }
+    else if (cur && this._photoNow !== this._lastPhoto) { this._centerThumb(); }
+    this._lastOpen = cur;
+    this._lastPhoto = this._photoNow;
+  }
+  _closeAnimated() {
+    if (this._closingT) return;
+    let reduce = false;
+    try { reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) {}
+    this.setState({ closing: true });
+    this._closingT = setTimeout(() => {
+      this._closingT = null;
+      if (this.state && this.state.closing) this.setState({ openId: null, photo: 0, closing: false });
+    }, reduce ? 0 : 190);
+  }
+  _keys(next, prev, close) {
+    return (e) => {
+      if (!e) return;
+      if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+      else if (e.key === 'Escape') { e.preventDefault(); close(); }
+    };
+  }
+  _focusViewer() { try { const el = document.querySelector('[data-viewer]'); if (el) el.focus({ preventScroll: true }); } catch (e) {} }
+  _returnToCard(id) {
+    try {
+      const el = document.querySelector('[data-card="' + id + '"]');
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight || 0;
+      if (r.top < 60 || r.top > vh - 120) {
+        const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: Math.max(0, (window.pageYOffset || 0) + r.top - 80), behavior: reduce ? 'auto' : 'smooth' });
+      }
+      el.focus({ preventScroll: true });
+    } catch (e) {}
+  }
+  _centerThumb() {
+    try {
+      const t = document.querySelector('[data-viewer] [aria-current="true"]');
+      const strip = t && t.closest('.strip, .v-strip');
+      if (!strip) return;
+      const sr = strip.getBoundingClientRect();
+      const tr = t.getBoundingClientRect();
+      strip.scrollBy({ left: (tr.left + tr.width / 2) - (sr.left + sr.width / 2), behavior: 'smooth' });
+    } catch (e) {}
+  }
+  _reveal() {
+    try {
+      const el = document.querySelector('[data-viewer]');
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight || 0;
+      if (r.top >= 60 && r.top <= vh * 0.45) return;
+      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: Math.max(0, (window.pageYOffset || 0) + r.top - 68), behavior: reduce ? 'auto' : 'smooth' });
+    } catch (e) {}
+  }
+  _swipe(next, prev) {
+    return {
+      start: (e) => {
+        const t = e && e.touches && e.touches[0];
+        this._sx = t ? t.clientX : null;
+        this._sy = t ? t.clientY : null;
+      },
+      end: (e) => {
+        const t = e && e.changedTouches && e.changedTouches[0];
+        if (!t || this._sx == null) return;
+        const dx = t.clientX - this._sx;
+        const dy = t.clientY - this._sy;
+        this._sx = null;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.3) { if (dx < 0) next(); else prev(); }
+      }
+    };
+  }
+  pieceData() {
+    return [
+      { id: 'astronaut', title: 'Astronaut', year: '2024', when: 'July 2024', where: 'Downtown Hillsboro, OR',
+        artists: 'Amy Madden', original: '', size: '10×10 ft', total: 26,
+        cover: 'assets/img/art-astronaut.webp',
+        story: 'La Strada Chalk Art Festival in Downtown Hillsboro (summer 2024). The theme this year was “Yesterday’s Tomorrow.” High quality chalks from Mount Vision really helped this piece feel like velvet on the pavement.',
+        links: [{ label: 'La Strada dei Pastelli Chalk Art Festival', href: 'https://tvcreates.org/lastrada/' }],
+        photos: ['assets/img/g-astronaut-01.webp', 'assets/img/g-astronaut-02.webp', 'assets/img/g-astronaut-03.webp', 'assets/img/g-astronaut-04.webp', 'assets/img/g-astronaut-05.webp', 'assets/img/g-astronaut-06.webp'] },
+      { id: 'velvet-cat', title: 'Velvet Cat', year: '2023', when: 'July 15 & 16, 2023', where: 'Downtown Hillsboro, OR',
+        artists: 'Amy Madden & Naomi Duben', original: 'n/a', size: '10×10 ft', total: 60, award: true,
+        cover: 'assets/img/art-velvet-cat.webp',
+        story: 'La Strada Chalk Art Festival in Downtown Hillsboro (summer 2023). The theme this year was “Creative Critters.” This piece was voted and won the “People’s Choice Award” in the 10x10 category. High quality black chalks from Mount Vision really helped this piece feel like velvet on the pavement. I completed the cat’s face/ears/small flowers and bottom fur.',
+        links: [{ label: 'Hillsboro Herald — Winners!', href: 'https://www.instagram.com/p/Cux6CLoJrz9/' }],
+        photos: ['assets/img/gallery-vc-01.webp', 'assets/img/gallery-vc-02.webp', 'assets/img/gallery-vc-03.webp', 'assets/img/gallery-vc-04.webp', 'assets/img/gallery-vc-05.webp', 'assets/img/gallery-vc-06.webp', 'assets/img/gallery-vc-07.webp', 'assets/img/gallery-vc-08.webp', 'assets/img/gallery-vc-09.webp', 'assets/img/gallery-vc-10.webp', 'assets/img/gallery-vc-11.webp', 'assets/img/gallery-vc-12.webp'] },
+      { id: 'grapes', title: 'Grapes', year: '2018', when: 'June 2018', where: 'Downtown San Rafael, CA',
+        artists: 'Amy Madden & Naomi Duben', original: 'Alphonse Mucha', size: '8×16 ft', total: 68,
+        cover: 'assets/img/art-grapes.webp',
+        story: 'Two day festival. I completed the top half of the image and Naomi did the bottom half. There were so many pieces of fruit to draw. lol Loved how smooth the face colors turned out.',
+        links: [],
+        photos: ['assets/img/g-grapes-01.webp', 'assets/img/g-grapes-02.webp', 'assets/img/g-grapes-03.webp', 'assets/img/g-grapes-04.webp'] },
+      { id: 'black-white-face', title: 'Black & White Face', year: '2013', when: 'June 2013', where: 'Downtown San Rafael, CA',
+        artists: 'Amy Madden', original: 'Unknown', size: '6×8 ft', total: 15,
+        cover: 'assets/img/art-bw-face.jpg',
+        story: 'Two day festival. Big challenge to complete a black and white piece as you are limited on color ranges and variance. It was a good challenge.',
+        links: [{ label: 'Italian Street Painting Marin on Instagram', href: 'https://www.instagram.com/p/BfQ-IHLACMT/' }],
+        photos: ['assets/img/g-black-white-face-01.webp', 'assets/img/g-black-white-face-02.webp', 'assets/img/g-black-white-face-03.webp', 'assets/img/g-black-white-face-04.webp', 'assets/img/g-black-white-face-05.webp', 'assets/img/g-black-white-face-06.webp'] },
+      { id: 'blue-bird', title: 'Bird', year: '2016', when: 'June 2016', where: 'Downtown San Rafael, CA',
+        artists: 'Amy Madden & Naomi Duben', original: 'Unknown (stock photography)', size: '8×16 ft', total: 43,
+        cover: 'assets/img/art-bird.jpg',
+        story: 'One of our most popular pieces Naomi Duben and I have completed. This just came alive on the street with the bold and bright feathers. The blue colors really popped on the pavement. Maybe we should do a bird again?',
+        links: [],
+        photos: ['assets/img/g-blue-bird-01.webp', 'assets/img/g-blue-bird-02.webp', 'assets/img/g-blue-bird-03.webp', 'assets/img/g-blue-bird-04.webp', 'assets/img/g-blue-bird-05.webp', 'assets/img/g-blue-bird-06.webp'] },
+      { id: 'flowers-beads', title: 'Flowers & Beads', year: '2018', when: 'July 2018', where: 'Downtown San Rafael, CA',
+        artists: 'Amy Madden & Naomi Duben', original: 'Unknown (stock photography)', size: '8×16 ft', total: 26,
+        cover: 'assets/img/art-flowers-beads.jpg',
+        story: 'Two day weekend event. Naomi loves to do textures in pieces i.e. beads, embroidery, jewelry. This piece had it all! I took on the flowers and the face. The flowers and necklace took up so much time. Called in the troops to help us with the black border and background.',
+        links: [],
+        photos: ['assets/img/g-flowerhead-01.webp', 'assets/img/g-flowerhead-02.webp', 'assets/img/g-flowerhead-03.webp', 'assets/img/g-flowerhead-04.webp', 'assets/img/g-flowerhead-05.webp', 'assets/img/g-flowerhead-06.webp'] },
+      { id: 'dog-fruit-nose', title: 'Dog Fruit Nose', year: '2021', when: 'August 2021', where: 'Cerritos Town Center, CA',
+        artists: 'Amy Madden & Naomi Duben', original: 'Unknown (stock photography)', size: '5×5 ft', total: 34,
+        cover: 'assets/img/art-dog-fruit-nose.webp',
+        story: 'One day festival and it rained on us. We lost a couple of hours of drawing time and had to start over. Chalk and water don’t mix.',
+        links: [],
+        photos: ['assets/img/g-dog-fruit-nose-01.webp', 'assets/img/g-dog-fruit-nose-02.webp', 'assets/img/g-dog-fruit-nose-03.webp', 'assets/img/g-dog-fruit-nose-04.webp', 'assets/img/g-dog-fruit-nose-05.webp', 'assets/img/g-dog-fruit-nose-06.webp'] },
+      { id: 'dog-fish', title: 'Dog Fish', year: '2019', when: 'July 2019', where: 'Cerritos Town Center, CA',
+        artists: 'Amy Madden & Naomi Duben', original: '', size: '5×5 ft', total: 6,
+        cover: 'assets/img/art-dog-fish.png',
+        story: 'One day festival with children focused art creating activities. Went with something kid friendly for this piece.',
+        links: [],
+        photos: ['assets/img/g-dog-fish-01.webp', 'assets/img/g-dog-fish-02.webp', 'assets/img/g-dog-fish-03.webp', 'assets/img/g-dog-fish-04.webp', 'assets/img/g-dog-fish-05.webp'] },
+      { id: 'makeup-mask', title: 'Makeup Mask', year: '2015', when: 'June 2015', where: 'Downtown San Rafael, CA',
+        artists: 'Amy Madden', original: 'Unknown (stock photography)', size: '6×8 ft', total: 18,
+        cover: 'assets/img/art-makeup-mask.jpg',
+        story: 'Theme was masks for 2015. These polka dots gave me a run for my money. Loved how the colors came out in this piece.',
+        links: [{ label: 'Italian Street Painting Marin on Instagram', href: 'https://www.instagram.com/p/BTr1i_mF0Ye/' }],
+        photos: ['assets/img/g-make-up-mask-01.webp', 'assets/img/g-make-up-mask-02.webp', 'assets/img/g-make-up-mask-03.webp', 'assets/img/g-make-up-mask-04.webp', 'assets/img/g-make-up-mask-05.webp', 'assets/img/g-make-up-mask-06.webp'] }
+    ];
+  }
+
+  _pageVals() {
+    const s = this.state || {};
+    const filter = s.filter || 'all';
+    const openId = s.openId === undefined ? (this._narrow() ? null : 'velvet-cat') : s.openId;
+    const photo = s.photo || 0;
+    const navOpen = !!s.navOpen;
+
+    const all = this.pieceData();
+    const isSolo = (p) => p.artists === 'Amy Madden';
+    const list = all.filter((p) => filter === 'all' ? true : (filter === 'solo' ? isSolo(p) : !isSolo(p)));
+    const openP = list.find((p) => p.id === openId) || null;
+
+    const segDefs = [{ id: 'all', label: 'All' }, { id: 'solo', label: 'Solo' }, { id: 'collab', label: 'Collaborations' }];
+    const segIndex = Math.max(0, segDefs.findIndex((f) => f.id === filter));
+    const segs = segDefs.map((f) => ({
+      ...f,
+      pressed: f.id === filter ? 'true' : 'false',
+      cls: f.id === filter ? 'is-on' : '',
+      pick: () => {
+        const nextList = all.filter((p) => f.id === 'all' ? true : (f.id === 'solo' ? isSolo(p) : !isSolo(p)));
+        const keep = openP && nextList.some((p) => p.id === openP.id);
+        this.setState({ filter: f.id, openId: keep ? openP.id : null, photo: keep ? photo : 0, ft: (s.ft || 0) + 1 });
+      }
+    }));
+
+    // viewer
+    let v = { regionLabel: '', eyebrow: '', title: '', counter: '', src: '', alt: '', showing: '', thumbs: [], specs: [], story: '', links: [], hasLinks: false,
+      close: () => {}, next: () => {}, prev: () => {}, swStart: () => {}, swEnd: () => {}, anim: '', nextSrc: '', prevSrc: '', onKey: () => {} };
+    if (openP) {
+      const n = openP.photos.length;
+      const idx = ((photo % n) + n) % n;
+      const goNext = () => this.setState({ openId: openP.id, photo: (idx + 1) % n, dir: 'n', tick: (s.tick || 0) + 1 });
+      const goPrev = () => this.setState({ openId: openP.id, photo: (idx - 1 + n) % n, dir: 'p', tick: (s.tick || 0) + 1 });
+      const sw = this._swipe(goNext, goPrev);
+      const specs = [
+        { k: 'Date', v: openP.when },
+        { k: 'Place', v: openP.where },
+        { k: 'Size', v: openP.size },
+        { k: 'Artists', v: openP.artists }
+      ];
+      if (openP.original && openP.original !== 'n/a') specs.push({ k: 'Original artist', v: openP.original });
+      v = {
+        regionLabel: openP.title + ' gallery',
+        eyebrow: 'Chalk Art · ' + openP.year,
+        title: openP.title,
+        counter: (idx + 1) + ' / ' + n,
+        src: openP.photos[idx],
+        alt: openP.title + ', chalk art photo ' + (idx + 1) + ' of ' + n,
+        showing: 'Showing ' + n + ' of ' + openP.total + ' photos',
+        thumbs: openP.photos.map((src, i) => ({
+          src,
+          label: 'Photo ' + (i + 1),
+          isActive: i === idx,
+          current: i === idx ? 'true' : 'false',
+          opacity: i === idx ? '1' : '0.55',
+          ringStyle: i === idx ? '0 0 0 2px #F6C453' : '0 0 0 0 rgba(0,0,0,0)',
+          go: () => this.setState({ openId: openP.id, photo: i, dir: 'j', tick: (s.tick || 0) + 1 })
+        })),
+        specs,
+        story: openP.story,
+        links: openP.links,
+        hasLinks: openP.links.length > 0,
+        close: () => this._closeAnimated(),
+        next: goNext,
+        prev: goPrev,
+        swStart: sw.start,
+        swEnd: sw.end
+      };
+    }
+
+    this._openNow = openP ? openP.id : null;
+    this._photoNow = photo;
+    if (openP) {
+      const _n = openP.photos.length;
+      const _i = ((photo % _n) + _n) % _n;
+      v.anim = 'ph-' + (s.dir || 'j') + ((s.tick || 0) % 2);
+      v.nextSrc = openP.photos[(_i + 1) % _n];
+      v.prevSrc = openP.photos[(_i - 1 + _n) % _n];
+      v.onKey = this._keys(v.next, v.prev, v.close);
+    }
+    const pieces = list.map((p) => {
+      const isOpen = !!openP && p.id === openP.id;
+      return {
+        id: p.id,
+        title: p.title,
+        cover: p.cover,
+        award: !!p.award,
+        isOpen,
+        meta: p.year + ' · ' + p.where,
+        alt: p.title + ', chalk street painting, ' + p.year,
+        ariaLabel: p.title + ', ' + p.year + (isOpen ? ', close gallery' : ', open gallery'),
+        expanded: isOpen ? 'true' : 'false',
+        tileCls: isOpen ? 'is-open' : '',
+        toggle: () => (isOpen ? this._closeAnimated() : this.setState({ openId: p.id, photo: 0, closing: false, dir: 'j' }))
+      };
+    });
+
+    return {
+      vClosing: s.closing ? 'is-closing' : '',
+      gridAnim: 'ga' + ((s.ft || 0) % 2),
+      navOpen,
+      navOpenStr: navOpen ? 'true' : 'false',
+      toggleNav: () => this.setState({ navOpen: !navOpen }),
+      segs,
+      pillX: (segIndex * 100) + '%',
+      countLabel: list.length + (list.length === 1 ? ' piece' : ' pieces'),
+      pieces,
+      v
+    };
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>

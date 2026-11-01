@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adventures · Madden's Adventures</title>
+<meta name="description" content="Travel photography from Vietnam and a West Coast road trip from California to Washington.">
+<meta name="theme-color" content="#F8FAFB">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Madden's Adventures">
+<meta property="og:title" content="Adventures · Madden's Adventures">
+<meta property="og:description" content="Travel photography from Vietnam and a West Coast road trip from California to Washington.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=Poppins:wght@300;400;500;600&amp;display=swap">
+  <style>
+html, body { margin: 0; background: #F8FAFB; }
+.pg { background: #F8FAFB; color: #173350; font-family: 'Poppins', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.pg *, .pg *::before, .pg *::after { box-sizing: border-box; }
+.pg h1, .pg h2, .pg h3, .pg h4, .pg p, .pg ul, .pg ol, .pg figure, .pg blockquote { margin: 0; }
+.pg ul, .pg ol { list-style: none; padding: 0; }
+.pg img { display: block; max-width: 100%; }
+.pg button { font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; text-align: left; -webkit-tap-highlight-color: transparent; }
+.pg :focus-visible { outline: 3px solid #375CF0; outline-offset: 3px; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+.nw { white-space: nowrap; }
+
+/* ---- shared chrome v2 ---- */
+.hdr { position: sticky; top: 0; z-index: 30; background: rgba(248,250,251,.72); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(23,51,80,.10); }
+.hdr-in { max-width: 1240px; height: 56px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.logo { display: inline-flex; align-items: baseline; gap: 4px; font-family: 'Archivo', sans-serif; font-stretch: 75%; font-weight: 700; font-size: 19px; letter-spacing: -0.01em; color: #173350; text-decoration: none; white-space: nowrap; }
+.logo-dot { width: 7px; height: 7px; border-radius: 50%; background: #F6C453; display: inline-block; }
+.nav { display: flex; align-items: center; gap: 30px; }
+.nav a { position: relative; padding: 8px 0; font-size: 14px; font-weight: 400; color: #173350; opacity: .82; text-decoration: none; transition: opacity .2s; }
+@media (hover: hover) { .nav a:hover { opacity: 1; } }
+.nav a[aria-current] { font-weight: 500; opacity: 1; }
+.nav a[aria-current]::after { content: ""; position: absolute; left: 50%; top: calc(100% - 2px); width: 5px; height: 5px; margin-left: -2.5px; border-radius: 50%; background: #F6C453; }
+.hdr-r { display: flex; align-items: center; gap: 10px; }
+.ig { width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #173350; text-decoration: none; transition: background-color .2s; }
+@media (hover: hover) { .ig:hover { background: rgba(23,51,80,.07); } }
+.hdr-cta { height: 36px; padding: 0 16px; border-radius: 999px; display: inline-flex; align-items: center; background: #375CF0; color: #fff; font-size: 14px; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color .2s; }
+@media (hover: hover) { .hdr-cta:hover { background: #2546D0; } }
+.menu-btn { display: none; width: 44px; height: 44px; border-radius: 50%; align-items: center; justify-content: center; color: #173350; transition: background-color .2s; }
+@media (hover: hover) { .menu-btn:hover { background: rgba(23,51,80,.07); } }
+.sheet { max-width: 1240px; margin: 0 auto; padding: 12px clamp(16px, 4vw, 40px) 28px; border-top: 1px solid rgba(23,51,80,.10); }
+.sheet-links a { display: flex; align-items: center; gap: 12px; min-height: 52px; font-family: 'Archivo', sans-serif; font-stretch: 100%; font-weight: 700; font-size: 28px; letter-spacing: -0.025em; color: #173350; text-decoration: none; }
+.sheet-links a[aria-current]::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #F6C453; }
+.sheet-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; }
+.sheet-soc { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(23,51,80,.16); color: #173350; font-size: 14px; font-weight: 500; text-decoration: none; }
+.sheet-cta { display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #375CF0; color: #fff; font-size: 14px; font-weight: 500; text-decoration: none; }
+
+.ftr { background: #173350; color: #C4D0DA; margin-top: 0; padding: 72px 0 40px; }
+.ftr-top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px 32px; }
+.ftr .logo { color: #fff; font-size: 22px; }
+.ftr-line { font-size: 15px; color: #C4D0DA; }
+.ftr-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 48px; }
+.ftr-h { font-family: 'Archivo', sans-serif; font-stretch: 75%; font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #fff; margin-bottom: 10px; }
+.ftr-grid a { display: block; padding: 6px 0; font-size: 14px; color: #C4D0DA; text-decoration: none; transition: color .2s; }
+@media (hover: hover) { .ftr-grid a:hover { color: #fff; } }
+.ftr-rule { height: 1px; background: rgba(255,255,255,.12); margin: 48px 0 20px; }
+.ftr-bot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: 13px; }
+.ftr-bot .chalk { color: #F6C453; }
+
+/* ---- type ---- */
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: 'Archivo', sans-serif; font-stretch: 75%; font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #3F5873; }
+.eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #F6C453; flex: none; }
+.eyebrow.pink::before { background: #F39BB0; }
+.eyebrow.mint::before { background: #7FD1B9; }
+.display { font-family: 'Archivo', sans-serif; font-stretch: 100%; font-weight: 700; letter-spacing: -0.035em; line-height: .98; font-size: clamp(52px, 7.2vw, 104px); color: #173350; }
+.headline { font-family: 'Archivo', sans-serif; font-stretch: 100%; font-weight: 700; letter-spacing: -0.03em; line-height: 1.02; font-size: clamp(36px, 4.6vw, 64px); }
+.lead { font-weight: 300; font-size: 23px; line-height: 1.5; color: #173350; }
+.body { font-weight: 300; font-size: 18px; line-height: 1.65; color: #3F5873; }
+.hint { font-size: 14px; color: #3F5873; }
+.sq { position: relative; display: inline-block; }
+.sq-line { position: absolute; left: -1%; width: 102%; bottom: -0.12em; height: .26em; overflow: visible; pointer-events: none; }
+.sec-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 36px; }
+.ast { color: #F39BB0; font-size: 1.1em; margin-right: 6px; }
+
+/* ---- shared VIEWER ---- */
+.viewer { background: #0E1F33; color: #fff; border-radius: 28px; padding: 28px; }
+.v-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.v-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: 'Archivo', sans-serif; font-stretch: 75%; font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #C4D0DA; }
+.v-eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #F6C453; }
+.v-title { margin-top: 6px; font-family: 'Archivo', sans-serif; font-stretch: 100%; font-weight: 650; font-size: 24px; letter-spacing: -0.02em; line-height: 1.15; color: #fff; }
+.v-tools { display: flex; align-items: center; gap: 14px; flex: none; }
+.v-count { font-size: 14px; color: #C4D0DA; font-variant-numeric: tabular-nums; }
+.v-close { width: 44px; height: 44px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,.10); color: #fff; transition: background-color .2s; }
+@media (hover: hover) { .v-close:hover { background: rgba(255,255,255,.2); } }
+.v-body { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 36px; margin-top: 22px; align-items: start; }
+.v-body.solo { grid-template-columns: minmax(0, 1fr); }
+.v-stage { position: relative; height: 600px; display: flex; align-items: center; justify-content: center; border-radius: 14px; background: rgba(255,255,255,.03); }
+.v-img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; border-radius: 14px; }
+.v-nav { position: absolute; top: 50%; margin-top: -24px; width: 48px; height: 48px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,.14); color: #fff; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); transition: background-color .2s; }
+@media (hover: hover) { .v-nav:hover { background: rgba(255,255,255,.26); } }
+.v-prev { left: 12px; } .v-next { right: 12px; }
+.v-strip { display: flex; gap: 8px; overflow-x: auto; margin-top: 16px; padding: 4px 3px; scrollbar-width: thin; }
+.v-thumb { flex: none; width: 64px; height: 64px; border-radius: 10px; opacity: .55; transition: opacity .2s, box-shadow .2s; }
+.v-thumb img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+@media (hover: hover) { .v-thumb:hover { opacity: .85; } }
+.v-thumb.is-on { opacity: 1; box-shadow: 0 0 0 2px #F6C453; }
+.v-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; margin-top: 14px; font-size: 14px; color: #C4D0DA; }
+.v-foot a { color: #C4D0DA; text-decoration: none; }
+@media (hover: hover) { .v-foot a:hover { color: #fff; text-decoration: underline; } }
+.v-det { color: #C4D0DA; font-size: 16px; font-weight: 300; line-height: 1.7; display: flex; flex-direction: column; gap: 16px; }
+.v-det-h { font-family: 'Archivo', sans-serif; font-stretch: 100%; font-weight: 650; font-size: 22px; letter-spacing: -0.02em; line-height: 1.2; color: #fff; }
+.v-det-spec { font-size: 14px; font-weight: 500; color: #fff; display: flex; gap: 10px; align-items: baseline; }
+.v-det-spec::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #7FD1B9; flex: none; transform: translateY(-2px); }
+.v-rule { height: 1px; background: rgba(255,255,255,.12); }
+.v-q { font-family: 'Archivo', sans-serif; font-stretch: 100%; font-weight: 650; font-size: 22px; letter-spacing: -0.02em; line-height: 1.25; color: #fff; }
+.v-by { font-size: 14px; color: #C4D0DA; margin-top: 8px; }
+.v-link { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,.7); color: #fff; font-size: 14px; font-weight: 500; text-decoration: none; transition: background-color .2s; }
+@media (hover: hover) { .v-link:hover { background: rgba(255,255,255,.1); } }
+.vslot { margin-top: 32px; scroll-margin-top: 72px; }
+
+/* ---- motion ---- */
+@media (prefers-reduced-motion: no-preference) {
+  .tile { transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s cubic-bezier(.2,.8,.2,1); }
+  .tile:focus-visible { transform: scale(1.015); } @media (hover: hover) { .tile:hover { transform: scale(1.015); } }
+  .tile .zoom { transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+  .tile:focus-visible .zoom { transform: scale(1.04); } @media (hover: hover) { .tile:hover .zoom { transform: scale(1.04); } }
+  .open-anim { animation: openRise .36s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes openRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @supports (animation-timeline: view()) {
+    .reveal { animation: rise both; animation-timeline: view(); animation-range: entry 0% cover 25%; }
+    @keyframes rise { from { opacity: 0; translate: 0 24px; } to { opacity: 1; translate: 0 0; } }
+  }
+}
+
+@media (max-width: 900px) { .nav, .hdr-cta { display: none; } .menu-btn { display: inline-flex; } }
+@media (min-width: 901px) { .sheet { display: none; } }
+@media (max-width: 760px) { .ftr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 1020px) { .v-body { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) { .v-stage { height: 420px; } .viewer { padding: 16px; border-radius: 22px; } }
+
+.a-hero { padding: 32px 0 0; }
+.hero { position: relative; aspect-ratio: 16 / 9; border-radius: 28px; overflow: hidden; background: #0E1F33; isolation: isolate;
+  box-shadow: 0 1px 1px rgba(23,51,80,.04), 0 18px 40px -18px rgba(23,51,80,.28); }
+.hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,31,51,.92) 0%, rgba(14,31,51,.62) 30%, rgba(14,31,51,0) 64%); }
+.hero-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 56px; color: #fff; }
+.hero-cap .eyebrow { color: #C4D0DA; }
+.hero-q { margin-top: 18px; max-width: 940px; color: #fff; }
+.hero-by { margin-top: 18px; font-size: 16px; color: #C4D0DA; }
+.a-trips { background: #EEF2F3; padding: 120px 0 140px; margin-top: 120px; }
+.tl { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-bottom: 28px; }
+.tl::before { content: ""; position: absolute; left: 6px; right: 0; top: 7px; height: 1px; background: rgba(23,51,80,.22); }
+.tl::after { content: ""; position: absolute; right: 0; top: 3px; width: 9px; height: 9px; border-top: 1px solid rgba(23,51,80,.35); border-right: 1px solid rgba(23,51,80,.35); transform: rotate(45deg); }
+.tl-stop { position: relative; padding-top: 30px; }
+.tl-dot { position: absolute; top: 0; left: 0; width: 15px; height: 15px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 4px #EEF2F3; transition: box-shadow .3s; }
+.tl-stop.is-on .tl-dot { box-shadow: 0 0 0 4px #EEF2F3, 0 0 0 7px var(--c); }
+.tl-year { font-family: 'Archivo', sans-serif; font-stretch: 100%; font-weight: 700; font-size: 34px; letter-spacing: -0.03em; line-height: 1; color: #173350; opacity: .45; transition: opacity .3s; }
+.tl-stop.is-on .tl-year { opacity: 1; }
+.c-yellow { --c: #F6C453; } .c-pink { --c: #F39BB0; } .c-mint { --c: #7FD1B9; }
+.trips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+.trip { display: flex; flex-direction: column; width: 100%; padding: 10px; border-radius: 28px; background: #F8FAFB; color: #173350;
+  box-shadow: 0 1px 1px rgba(23,51,80,.04), 0 18px 40px -18px rgba(23,51,80,.28); }
+.trip:focus-visible { box-shadow: 0 1px 1px rgba(23,51,80,.05), 0 28px 56px -20px rgba(23,51,80,.40); } @media (hover: hover) { .trip:hover { box-shadow: 0 1px 1px rgba(23,51,80,.05), 0 28px 56px -20px rgba(23,51,80,.40); } }
+.trip.is-on { box-shadow: 0 0 0 4px #EEF2F3, 0 0 0 7px #F6C453, 0 18px 40px -18px rgba(23,51,80,.28); }
+.trip-media { display: block; aspect-ratio: 4 / 3; border-radius: 20px; overflow: hidden; background: #DDE4E7; }
+.trip-media img { width: 100%; height: 100%; object-fit: cover; }
+.trip-body { flex: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px 16px 14px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; min-height: 28px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(23,51,80,.16); font-size: 13px; font-weight: 500; color: #173350; }
+.chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--c); }
+.trip-title { display: block; font-family: 'Archivo', sans-serif; font-stretch: 100%; font-weight: 650; font-size: 26px; letter-spacing: -0.02em; line-height: 1.1; }
+.trip-copy { display: block; font-size: 16px; font-weight: 300; line-height: 1.65; color: #3F5873; }
+.trip-extra { display: block; font-size: 15px; font-weight: 400; line-height: 1.6; color: #173350; }
+.trip-foot { margin-top: auto; padding-top: 8px; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.trip-cta { display: inline-flex; align-items: center; min-height: 40px; padding: 0 18px; border-radius: 999px; background: #375CF0; color: #fff; font-size: 14px; font-weight: 500; }
+.trip.is-on .trip-cta { background: #173350; }
+.trip-n { font-size: 14px; color: #3F5873; }
+.more { margin-top: 96px; }
+.more-label { margin-bottom: 20px; }
+.more-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 820px; }
+.rt { display: flex; align-items: center; gap: 20px; width: 100%; padding: 10px 24px 10px 10px; border-radius: 28px; background: #F8FAFB; color: #173350;
+  box-shadow: 0 1px 1px rgba(23,51,80,.04), 0 18px 40px -18px rgba(23,51,80,.28); }
+.rt:focus-visible { box-shadow: 0 1px 1px rgba(23,51,80,.05), 0 28px 56px -20px rgba(23,51,80,.40); } @media (hover: hover) { .rt:hover { box-shadow: 0 1px 1px rgba(23,51,80,.05), 0 28px 56px -20px rgba(23,51,80,.40); } }
+.rt.is-on { box-shadow: 0 0 0 4px #EEF2F3, 0 0 0 7px #F6C453, 0 18px 40px -18px rgba(23,51,80,.28); }
+.rt-media { flex: none; width: 152px; height: 114px; border-radius: 20px; overflow: hidden; background: #DDE4E7; display: block; }
+.rt-media img { width: 100%; height: 100%; object-fit: cover; }
+.rt-txt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.rt-title { font-family: 'Archivo', sans-serif; font-stretch: 100%; font-weight: 650; font-size: 24px; letter-spacing: -0.02em; line-height: 1.1; }
+.rt-n { font-size: 14px; color: #3F5873; }
+.rt-go { flex: none; width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: #EEF2F3; color: #173350; }
+.rt.is-on .rt-go { background: #F6C453; }
+
+@media (max-width: 1100px) { .hero-cap { padding: 36px; } }
+@media (max-width: 900px) {
+  .hero { aspect-ratio: 4 / 5; }
+  .tl { display: none; }
+  .trips { grid-template-columns: minmax(0, 1fr); }
+  .more-row { grid-template-columns: minmax(0, 1fr); }
+  .a-trips { padding: 88px 0 104px; margin-top: 80px; }
+}
+
+/* ===== touch & phone layer (mobile UX pass) ===== */
+sc-if, sc-for { display: contents; }
+a, button, input, textarea, select, label { touch-action: manipulation; }
+a, button { -webkit-tap-highlight-color: transparent; }
+@media (hover: none) and (prefers-reduced-motion: no-preference) {
+  .tile:active, .ch:active, .trip:active, .rt:active, .go-tile:active, .next:active, .pill:active, .send:active, .sheet-cta:active, .hdr-cta:active, .seg-btn:active, .thumb:active, .v-thumb:active { transform: scale(.97); transition: transform .12s ease; }
+}
+@media (max-width: 560px) {
+  .display { font-size: clamp(38px, 11vw, 52px); }
+  .headline { font-size: clamp(30px, 8.6vw, 40px); }
+  .lead { font-size: 18px; line-height: 1.6; }
+  .ftr { padding: 56px 0 32px; }
+  .ftr-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 32px; padding-bottom: 32px; }
+  .ftr-grid a, .ftr-list a { display: block; padding: 9px 0; }
+  .ftr-list { gap: 0; }
+  .ftr-rule { margin: 32px 0 18px; }
+  .sheet-links a, .sheet-link { font-size: 26px; }
+}
+
+/* ===== phone-friendly viewer ===== */
+.stage, .v-stage { touch-action: pan-y; -webkit-user-select: none; user-select: none; }
+.stage-img, .v-img { -webkit-user-drag: none; -webkit-touch-callout: none; pointer-events: none; }
+[data-viewer] { scroll-margin-top: 68px; }
+.swipe-hint { display: none; }
+@media (max-width: 640px) {
+  .viewer { padding: 14px; border-radius: 22px; }
+  .stage, .v-stage { height: auto; aspect-ratio: 4 / 5; border-radius: 14px; }
+  .nav-arrow, .v-nav { top: auto; bottom: 10px; margin-top: 0; width: 44px; height: 44px; }
+  .nav-prev, .v-prev { left: 10px; }
+  .nav-next, .v-next { right: 10px; }
+  .thumb, .v-thumb { width: 52px; height: 52px; scroll-snap-align: center; }
+  .strip, .v-strip { scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
+  .vw-title, .v-title { font-size: 20px; }
+  .vw-top { margin-bottom: 14px; gap: 10px; }
+  .vw-right, .v-tools { gap: 8px; }
+  .vw-body, .v-body { gap: 20px; }
+  .v-body { margin-top: 14px; }
+  .swipe-hint { display: inline; }
+}
+
+.trips { grid-auto-flow: dense; }
+.more-row { grid-auto-flow: dense; max-width: none; grid-template-columns: repeat(2, minmax(0, 398px)) minmax(0, 1fr); }
+.trips .vslot, .more-row .vslot { grid-column: 1 / -1; margin-top: 4px; }
+@media (max-width: 900px) { .more-row { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) {
+  .a-hero { padding-top: 16px; }
+  .hero { border-radius: 22px; }
+  .hero-cap { padding: 24px 20px; }
+  .hero-q { font-size: 28px; margin-top: 12px; }
+  .hero-by { font-size: 14px; margin-top: 12px; }
+  .a-trips { padding: 64px 0 88px; margin-top: 56px; }
+  .sec-head { margin-bottom: 20px; }
+  .trips { gap: 16px; }
+  .trip { border-radius: 22px; padding: 8px; }
+  .trip-media { border-radius: 16px; aspect-ratio: 16 / 10; }
+  .trip-body { padding: 16px 12px 10px; gap: 10px; }
+  .trip-title { font-size: 22px; }
+  .trip-copy { font-size: 15px; }
+  .trip-cta { min-height: 44px; }
+  .more { margin-top: 56px; }
+  .more-row { gap: 12px; }
+  .rt { padding: 8px 16px 8px 8px; gap: 14px; border-radius: 22px; }
+  .rt-media { width: 96px; height: 76px; border-radius: 14px; }
+  .rt-title { font-size: 20px; }
+  .rt-go { width: 44px; height: 44px; }
+}
+
+/* ===== shared site chrome (one header, menu and footer for every page) ===== */
+.sh-hdr { position: sticky; top: 0; z-index: 40; background: rgba(248,250,251,.8); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(23,51,80,.10); view-transition-name: site-header; }
+.sh-in { max-width: 1240px; height: 56px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.sh-logo { display: inline-flex; align-items: center; gap: 6px; font-family: 'Archivo', sans-serif; font-stretch: 75%; font-weight: 700; font-size: 19px; line-height: 1; letter-spacing: -0.01em; color: #173350; text-decoration: none; white-space: nowrap; }
+.sh-dot { width: 7px; height: 7px; border-radius: 50%; background: #F6C453; flex: none; }
+.sh-nav { display: flex; align-items: center; gap: 30px; }
+.sh-nav a { position: relative; padding: 8px 0; font: 400 14px/1.2 'Poppins', sans-serif; color: rgba(23,51,80,.78); text-decoration: none; transition: color .2s ease; }
+.sh-nav a[aria-current] { font-weight: 500; color: #173350; }
+.sh-nav a[aria-current]::after { content: ""; position: absolute; left: 50%; top: calc(100% - 1px); width: 5px; height: 5px; margin-left: -2.5px; border-radius: 50%; background: #F6C453; }
+.sh-r { display: flex; align-items: center; gap: 8px; }
+.sh-ic { width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #173350; text-decoration: none; transition: background-color .2s ease; }
+.sh-cta { display: inline-flex; align-items: center; justify-content: center; height: 36px; padding: 0 18px; border-radius: 999px; background: #375CF0; color: #FFFFFF; font: 500 14px/1 'Poppins', sans-serif; text-decoration: none; white-space: nowrap; transition: background-color .2s ease, transform .2s ease; }
+.sh-cta[aria-current] { background: #173350; }
+.sh-menu { display: none; position: relative; width: 44px; height: 44px; margin-right: -8px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: #173350; cursor: pointer; }
+.sh-bar { position: absolute; left: 13px; width: 18px; height: 1.75px; border-radius: 2px; background: currentColor; transition: transform .34s cubic-bezier(.2,.8,.2,1); }
+.sh-bar.b1 { top: 18.5px; } .sh-bar.b2 { top: 24px; }
+.sh-menu[aria-expanded="true"] .b1 { transform: translateY(2.75px) rotate(45deg); }
+.sh-menu[aria-expanded="true"] .b2 { transform: translateY(-2.75px) rotate(-45deg); }
+.sh-sheet { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .42s cubic-bezier(.2,.8,.2,1); }
+.sh-sheet.is-open { grid-template-rows: 1fr; }
+.sh-sheet-in { min-height: 0; overflow: hidden; }
+.sh-sheet:not(.is-open) .sh-sheet-in { visibility: hidden; transition: visibility 0s .42s; }
+.sh-pad { max-width: 1240px; margin: 0 auto; padding: 4px clamp(16px, 4vw, 40px) 24px; max-height: calc(100dvh - 56px); overflow-y: auto; overscroll-behavior: contain; }
+.sh-links { display: flex; flex-direction: column; }
+.sh-links a { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 58px; border-bottom: 1px solid rgba(23,51,80,.08); font-family: 'Archivo', sans-serif; font-stretch: 100%; font-weight: 700; font-size: 28px; letter-spacing: -0.02em; color: #173350; text-decoration: none; }
+.sh-links a svg { color: rgba(23,51,80,.4); flex: none; }
+.sh-links a span { display: inline-flex; align-items: center; gap: 10px; }
+.sh-links a[aria-current] span::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #F6C453; }
+.sh-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 20px; }
+.sh-cta-lg { height: 44px; padding: 0 22px; font-size: 15px; }
+.sh-soc { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(23,51,80,.18); color: #173350; font: 500 14px/1 'Poppins', sans-serif; text-decoration: none; }
+.sh-scrim { position: fixed; inset: 0; z-index: 35; display: block; width: 100%; padding: 0; border: 0; margin: 0; background: rgba(14,31,51,.28); opacity: 0; pointer-events: none; cursor: default; transition: opacity .3s ease; }
+.sh-scrim.is-open { opacity: 1; pointer-events: auto; }
+@media (hover: hover) {
+  .sh-nav a:hover { color: #173350; }
+  .sh-ic:hover { background: rgba(23,51,80,.07); }
+  .sh-cta:hover { background: #2546D0; }
+  .sh-cta[aria-current]:hover { background: #0E1F33; }
+  .sh-menu:hover { background: rgba(23,51,80,.07); }
+  .sh-links a:hover svg { color: #173350; }
+  .sh-soc:hover { background: rgba(23,51,80,.05); }
+}
+@media (max-width: 899px) { .sh-nav, .sh-r > .sh-cta { display: none; } .sh-menu { display: inline-flex; } }
+@media (min-width: 900px) { .sh-sheet, .sh-scrim { display: none; } }
+@media (max-width: 560px) { .sh-links a { font-size: 26px; min-height: 54px; } }
+@media (prefers-reduced-motion: no-preference) {
+  .sh-sheet.is-open .sh-links a, .sh-sheet.is-open .sh-row { animation: shIn .42s cubic-bezier(.2,.8,.2,1) backwards; }
+  .sh-sheet.is-open .sh-links a:nth-child(2) { animation-delay: .03s; }
+  .sh-sheet.is-open .sh-links a:nth-child(3) { animation-delay: .06s; }
+  .sh-sheet.is-open .sh-links a:nth-child(4) { animation-delay: .09s; }
+  .sh-sheet.is-open .sh-links a:nth-child(5) { animation-delay: .12s; }
+  .sh-sheet.is-open .sh-row { animation-delay: .15s; }
+  @keyframes shIn { from { opacity: 0; translate: 0 -8px; } }
+}
+@media (prefers-reduced-motion: reduce) { .sh-sheet, .sh-bar, .sh-scrim { transition: none; } }
+
+.sf { background: #173350; color: #C4D0DA; padding: 72px 0 36px; }
+.sf-in { max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+.sf-top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px 32px; }
+.sf .sh-logo { color: #FFFFFF; font-size: 22px; }
+.sf-line { margin: 0; font: 300 15px/1.5 'Poppins', sans-serif; color: #C4D0DA; }
+.sf-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 48px; }
+.sf-h { margin: 0 0 10px; font-family: 'Archivo', sans-serif; font-stretch: 75%; font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #FFFFFF; }
+.sf-grid a { display: block; padding: 6px 0; font: 400 14px/1.5 'Poppins', sans-serif; color: #C4D0DA; text-decoration: none; transition: color .2s ease; }
+.sf-bot { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; margin-top: 48px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.12); font: 400 13px/1.5 'Poppins', sans-serif; }
+.sf-chalk { color: #F6C453; }
+.sf-up { margin-left: auto; display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF; font-weight: 500; text-decoration: none; }
+@media (hover: hover) { .sf-grid a:hover, .sf-up:hover { color: #F6C453; } }
+@media (max-width: 760px) { .sf-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) {
+  .sf { padding: 56px 0 24px; }
+  .sf-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 32px; }
+  .sf-grid a { padding: 9px 0; }
+  .sf-bot { margin-top: 32px; }
+}
+
+/* ===== page transitions ===== */
+@view-transition { navigation: auto; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .pg-in { animation: pgIn .55s cubic-bezier(.2,.8,.2,1) backwards; }
+  @keyframes pgIn { from { opacity: 0; translate: 0 10px; } }
+  ::view-transition-old(root) { animation: vtOut .2s ease both; }
+  ::view-transition-new(root) { animation: vtIn .36s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes vtOut { to { opacity: 0; } }
+  @keyframes vtIn { from { opacity: 0; translate: 0 8px; } }
+}
+@media (prefers-reduced-motion: reduce) { ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; } }
+@media (hover: none) and (prefers-reduced-motion: no-preference) { .nx-card:active, .sh-cta:active, .sh-soc:active { transform: scale(.98); transition: transform .12s ease; } }
+
+/* ===== up next hand-off ===== */
+.nx { padding: clamp(88px, 9vw, 128px) 0; }
+.nx-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 32px; padding: 20px 20px 20px clamp(24px, 4vw, 56px); border-radius: 28px; background: #FFFFFF; color: #173350; text-decoration: none; box-shadow: 0 1px 1px rgba(23,51,80,.04), 0 18px 40px -18px rgba(23,51,80,.28); transition: transform .42s cubic-bezier(.2,.8,.2,1), box-shadow .42s cubic-bezier(.2,.8,.2,1); }
+.nx-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.nx-eb { display: inline-flex; align-items: center; gap: 10px; font-family: 'Archivo', sans-serif; font-stretch: 75%; font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #3F5873; }
+.nx-eb::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #F6C453; }
+.nx-title { display: inline-flex; align-items: center; gap: 18px; font-family: 'Archivo', sans-serif; font-stretch: 100%; font-weight: 700; font-size: clamp(36px, 4.6vw, 56px); line-height: 1.02; letter-spacing: -0.03em; }
+.nx-arrow { flex: none; width: 52px; height: 52px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: #375CF0; color: #FFFFFF; transition: translate .35s cubic-bezier(.2,.8,.2,1); }
+.nx-text { font: 300 16px/1.6 'Poppins', sans-serif; color: #3F5873; max-width: 440px; }
+.nx-frame { display: block; overflow: hidden; border-radius: 20px; height: 280px; }
+.nx-frame img { width: 100%; height: 100%; max-width: none; object-fit: cover; transition: scale .5s cubic-bezier(.2,.8,.2,1); }
+.nx-dark { grid-template-columns: minmax(0, 1fr); background: #173350; color: #FFFFFF; padding: clamp(32px, 5vw, 64px); box-shadow: none; }
+.nx-dark .nx-eb { color: #C4D0DA; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .nx-card:hover { transform: translateY(-2px); box-shadow: 0 2px 4px rgba(23,51,80,.06), 0 30px 60px -22px rgba(23,51,80,.42); }
+  .nx-card:hover .nx-arrow { translate: 4px 0; }
+  .nx-card:hover .nx-frame img { scale: 1.04; }
+}
+@media (max-width: 760px) {
+  .nx { padding: 64px 0 80px; }
+  .nx-card { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 12px; border-radius: 22px; }
+  .nx-copy { padding: 14px 10px 10px; gap: 12px; }
+  .nx-frame { order: -1; height: 200px; border-radius: 16px; }
+  .nx-arrow { width: 44px; height: 44px; }
+  .nx-dark { padding: 28px 22px; }
+}
+
+/* ===== viewer motion & focus ===== */
+.viewer:focus { outline: none; }
+.viewer:focus-visible { outline: 3px solid #F6C453; outline-offset: 3px; }
+.pre { display: none !important; }
+@media (prefers-reduced-motion: no-preference) {
+  .viewer.is-closing { animation: vwOut .19s cubic-bezier(.4,0,1,1) both; }
+  @keyframes vwOut { to { opacity: 0; translate: 0 10px; } }
+  .ph-n0 { animation: phN0 .38s cubic-bezier(.2,.8,.2,1) both; } .ph-n1 { animation: phN1 .38s cubic-bezier(.2,.8,.2,1) both; }
+  .ph-p0 { animation: phP0 .38s cubic-bezier(.2,.8,.2,1) both; } .ph-p1 { animation: phP1 .38s cubic-bezier(.2,.8,.2,1) both; }
+  .ph-j0 { animation: phJ0 .32s cubic-bezier(.2,.8,.2,1) both; } .ph-j1 { animation: phJ1 .32s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes phN0 { from { opacity: 0; translate: 32px 0; } to { opacity: 1; translate: 0 0; } }
+  @keyframes phN1 { from { opacity: 0; translate: 32px 0; } to { opacity: 1; translate: 0 0; } }
+  @keyframes phP0 { from { opacity: 0; translate: -32px 0; } to { opacity: 1; translate: 0 0; } }
+  @keyframes phP1 { from { opacity: 0; translate: -32px 0; } to { opacity: 1; translate: 0 0; } }
+  @keyframes phJ0 { from { opacity: 0; scale: .97; } to { opacity: 1; scale: 1; } }
+  @keyframes phJ1 { from { opacity: 0; scale: .97; } to { opacity: 1; scale: 1; } }
+  .wall-grid.ga0 .tile { animation: gA .42s cubic-bezier(.2,.8,.2,1) backwards; }
+  .wall-grid.ga1 .tile { animation: gB .42s cubic-bezier(.2,.8,.2,1) backwards; }
+  @keyframes gA { from { opacity: 0; translate: 0 12px; } }
+  @keyframes gB { from { opacity: 0; translate: 0 12px; } }
+}
+</style>
+<style>sc-if, sc-for { display: contents; } #dc-root:empty { min-height: 100vh; background: #F8FAFB; }</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<noscript><p style="font-family:sans-serif;padding:24px;max-width:640px">This site needs JavaScript turned on to show Amy’s chalk art and photos.</p></noscript>
+<template id="dc-template"><div class="pg pg-d" style="background:#F8FAFB; font-family:'Poppins',sans-serif">
+<header class="sh-hdr" id="top" onKeyDown="{{sh.key}}">
+    <div class="sh-in">
+      <a class="sh-logo" href="index.html">Madden's Adventures<span class="sh-dot" aria-hidden="true"></span></a>
+      <nav class="sh-nav" aria-label="Main"><a href="about.html">About</a><a href="chalk-art.html">Chalk Art</a><a href="moments.html">Moments</a><a href="adventures.html" aria-current="page">Adventures</a></nav>
+      <div class="sh-r">
+        <a class="sh-ic" href="https://www.instagram.com/majorsquest/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5v.01"></path></svg></a>
+        <a class="sh-cta" href="contact.html">Say hello</a>
+        <button class="sh-menu" type="button" aria-label="{{sh.label}}" aria-expanded="{{sh.exp}}" aria-controls="sh-sheet" onClick="{{sh.toggle}}"><span class="sh-bar b1" aria-hidden="true"></span><span class="sh-bar b2" aria-hidden="true"></span></button>
+      </div>
+    </div>
+    <div class="sh-sheet {{sh.cls}}" id="sh-sheet">
+      <div class="sh-sheet-in"><div class="sh-pad">
+        <nav class="sh-links" aria-label="Menu"><a href="index.html"><span>Home</span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></a><a href="about.html"><span>About</span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></a><a href="chalk-art.html"><span>Chalk Art</span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></a><a href="moments.html"><span>Moments</span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></a><a href="adventures.html" aria-current="page"><span>Adventures</span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></a></nav>
+        <div class="sh-row">
+          <a class="sh-cta sh-cta-lg" href="contact.html">Say hello</a>
+          <a class="sh-soc" href="https://www.instagram.com/majorsquest/" target="_blank" rel="noopener"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5v.01"></path></svg>Instagram</a>
+          <a class="sh-soc" href="https://www.linkedin.com/in/amy-madden-b2183a4/" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a2.5 2.5 0 0 1 5 0V17"></path></svg>LinkedIn</a>
+        </div>
+      </div></div>
+    </div>
+  </header>
+  <button class="sh-scrim {{sh.cls}}" type="button" tabindex="-1" aria-label="Close menu" onClick="{{sh.close}}"></button>
+<main class="pg-in">
+  <section class="a-hero">
+    <div class="wrap">
+      <figure class="hero reveal">
+        <img src="assets/img/adventures-banner.webp" alt="Adventures banner photo">
+        <span class="hero-scrim" aria-hidden="true"></span>
+        <figcaption class="hero-cap">
+          <h1 class="eyebrow">Adventures</h1>
+          <blockquote class="headline hero-q">“Traveling – it leaves you speechless, then turns you into a <span class="nw"><span class="sq">storyteller<svg class="sq-line" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 10 C 22 3, 38 14, 58 8 S 92 3, 112 9 S 146 14, 166 7 S 190 5, 197 9" fill="none" stroke="#F6C453" stroke-width="6" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span>.”</span></blockquote>
+          <p class="hero-by">— Ibn Battuta</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="a-trips" aria-labelledby="trips-label">
+    <div class="wrap">
+      <div class="sec-head reveal"><h2 class="eyebrow" id="trips-label">Trips</h2><p class="hint">Choose a trip to open its photos.</p></div>
+      <ol class="tl" aria-label="Timeline"><li class="tl-stop c-yellow {{tl.v17.cls}}"><span class="tl-dot" aria-hidden="true"></span><p class="tl-year">2017</p></li><li class="tl-stop c-pink {{tl.v19.cls}}"><span class="tl-dot" aria-hidden="true"></span><p class="tl-year">2019</p></li><li class="tl-stop c-mint {{tl.caw.cls}}"><span class="tl-dot" aria-hidden="true"></span><p class="tl-year">2021</p></li></ol>
+      <div class="trips">
+        <button class="trip tile c-yellow {{t.v17.cls}}" data-card="vietnam-2017" style="order:1;" type="button" aria-expanded="{{t.v17.exp}}" onClick="{{t.v17.open}}">
+          <span class="trip-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/adventures-card.webp" alt="Vietnam, 2017" style="object-position:center"></span>
+          <span class="trip-body">
+            <span class="chip">2017</span>
+            <span class="trip-title">Vietnam Trip #1</span>
+            <span class="trip-copy">First trip to Vietnam in 2017 with my husband (boyfriend at the time). I hadn’t traveled to any Asian countries yet and it was great to explore the beauty of the Vietnam culture.</span>
+            
+            <span class="trip-foot"><span class="trip-cta">{{t.v17.cta}}</span><span class="trip-n">{{t.v17.count}}</span></span>
+          </span>
+        </button>
+        <button class="trip tile c-pink {{t.v19.cls}}" data-card="vietnam-2019" style="order:3;" type="button" aria-expanded="{{t.v19.exp}}" onClick="{{t.v19.open}}">
+          <span class="trip-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/trip-vietnam-2019.webp" alt="Vietnam, 2019" style="object-position:center"></span>
+          <span class="trip-body">
+            <span class="chip">2019</span>
+            <span class="trip-title">Vietnam Trip #2</span>
+            <span class="trip-copy">Second trip to Vietnam. My husband (boyfriend at the time) and I brought along our friend James with us. Little did I know James was part of the big plan organized by Tony. My surprise engagement took place! I had no idea it was coming!</span>
+            <span class="trip-extra"><span class="ast" aria-hidden="true">✳︎</span>Memorable moments: engagement on the hand bridge in Da Nang, reconnecting with Tony’s family in Vietnam and a gifted jade bracelet from Tony’s aunt.</span>
+            <span class="trip-foot"><span class="trip-cta">{{t.v19.cta}}</span><span class="trip-n">{{t.v19.count}}</span></span>
+          </span>
+        </button>
+        <button class="trip tile c-mint {{t.caw.cls}}" data-card="california-washington" style="order:5;" type="button" aria-expanded="{{t.caw.exp}}" onClick="{{t.caw.open}}">
+          <span class="trip-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/trip-ca-wa.webp" alt="On the road from California to Washington" style="object-position:center 40%"></span>
+          <span class="trip-body">
+            <span class="chip">June 2021</span>
+            <span class="trip-title">CA. to WA.</span>
+            <span class="trip-copy">Roadtrips are a great way to explore. See our travels from CA to WA.</span>
+            
+            <span class="trip-foot"><span class="trip-cta">{{t.caw.cta}}</span><span class="trip-n">{{t.caw.count}}</span></span>
+          </span>
+        </button>
+      <sc-if value="{{tripOpen}}" hint-placeholder-val="{{ true }}">
+        <div class="vslot" style="order:{{vOrder}};"><section class="viewer open-anim {{vClosing}}" data-viewer="1" tabindex="-1" onKeyDown="{{onKey}}" id="trip-viewer" aria-label="{{v.title}} photos">
+  <div class="v-top">
+    <div><p class="v-eyebrow">{{v.eyebrow}}</p><h3 class="v-title">{{v.title}}</h3></div>
+    <div class="v-tools">
+      <span class="v-count" aria-live="polite">{{v.counter}}</span>
+      <button class="v-close" type="button" aria-label="Close gallery" onClick="{{close}}"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    </div>
+  </div>
+  <div class="v-body">
+    <div>
+      <div class="v-stage" onTouchStart="{{swStart}}" onTouchEnd="{{swEnd}}">
+        <img class="v-img {{anim}}" src="{{v.src}}" alt="{{v.alt}}"><img class="pre" src="{{nextSrc}}" alt="" aria-hidden="true"><img class="pre" src="{{prevSrc}}" alt="" aria-hidden="true">
+        <sc-if value="{{v.hasMany}}" hint-placeholder-val="{{ true }}">
+          <button class="v-nav v-prev" type="button" aria-label="Previous photo" onClick="{{prev}}"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+          <button class="v-nav v-next" type="button" aria-label="Next photo" onClick="{{next}}"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+        </sc-if>
+      </div>
+      <div class="v-strip">
+        <sc-for list="{{v.thumbs}}" as="t" hint-placeholder-count="6">
+          <button class="v-thumb {{t.cls}}" type="button" aria-label="{{t.label}}" aria-current="{{t.current}}" onClick="{{t.go}}"><img loading="lazy" decoding="async" src="{{t.src}}" alt=""></button>
+        </sc-for>
+      </div>
+      <div class="v-foot"><span>{{v.showing}}<span class="swipe-hint"> · Swipe to browse</span></span><a href="{{v.src}}" target="_blank" rel="noopener">Full resolution ↗</a></div>
+    </div>
+    <div class="v-det"><sc-if value="{{isV17}}" hint-placeholder-val="{{ false }}">
+        <h4 class="v-det-h">Vietnam for the first time!</h4>
+        <p class="v-det-spec">Visited: Sapa, Hanoi, Ha Long Bay and Saigon.</p>
+        <p>Traveling to Vietnam was an adventure I will never forget. Flying internationally as an adult for the first time was a little nerve-wracking. The countryside in Sapa (North Vietnam) was my favorite over being in the city. How folks travel around on mopeds, the stunning rice fields, green mountain ranges and colder temps in December just leave you breathless. With that said, the city did have Avengers Tower and in Ha Long Bay try to find King Kong. Tony’s family in Vietnam were so welcoming and can’t wait to visit them in the future.</p>
+      </sc-if>
+      <sc-if value="{{isV19}}" hint-placeholder-val="{{ true }}">
+        <h4 class="v-det-h">Vietnam V2!</h4>
+        <p>Right after my first visit to Vietnam a hand bridge was built connecting the north and the south near the DMZ line. To my complete surprise Vietnam trip #2 would include an engagement ring (I said “yes” btw), good times reconnecting with family, a bruised hand by a jade bracelet, meeting with friends who were traveling in Vietnam and such awesome memories. Can’t wait to go back again.</p>
+      </sc-if>
+      <sc-if value="{{isCaw}}" hint-placeholder-val="{{ false }}">
+        <h4 class="v-det-h">Honeymoon: SoCal to WA</h4>
+        <p>Traveling doesn’t always have to be lavish or expensive. We took a driving trip up the West Coast of the US exploring various hiking trails, coastal towns and outdoor activities. Honestly, this is when I really fell in love with the PNW. Now in 2023, I’m officially living in WA spending my time exploring and being open to new adventures. We had stops along the way in CA (San Jose, Redding), OR (Ashland, Thor’s Well in Yachats, Depoe Bay), WA (Gig Harbor, Tacoma, Tumwater Falls). Major loved the Oregon Coast exploring our very own beach. He was the happiest dog.</p>
+      </sc-if></div>
+  </div>
+</section></div>
+      </sc-if>
+      </div>
+      <div class="more">
+        <h3 class="eyebrow mint more-label">More road trips</h3>
+        <div class="more-row">
+        <button class="rt tile {{t.ojai.cls}}" data-card="ojai" style="order:1;" type="button" aria-expanded="{{t.ojai.exp}}" onClick="{{t.ojai.open}}">
+          <span class="rt-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/g-ojai-ca-01.webp" alt="Ojai, California"></span>
+          <span class="rt-txt"><span class="rt-title">Ojai, CA</span><span class="rt-n">4 photos</span></span>
+          <span class="rt-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></span>
+        </button>
+        <button class="rt tile {{t.paso.cls}}" data-card="paso-robles" style="order:3;" type="button" aria-expanded="{{t.paso.exp}}" onClick="{{t.paso.open}}">
+          <span class="rt-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/g-paso-robles-ca-01.webp" alt="Paso Robles, California"></span>
+          <span class="rt-txt"><span class="rt-title">Paso Robles, CA</span><span class="rt-n">4 photos</span></span>
+          <span class="rt-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></span>
+        </button>
+        <sc-if value="{{moreOpen}}" hint-placeholder-val="{{ false }}">
+          <div class="vslot" style="order:{{vOrder}};"><section class="viewer open-anim {{vClosing}}" data-viewer="1" tabindex="-1" onKeyDown="{{onKey}}" id="more-viewer" aria-label="{{v.title}} photos">
+  <div class="v-top">
+    <div><p class="v-eyebrow">{{v.eyebrow}}</p><h3 class="v-title">{{v.title}}</h3></div>
+    <div class="v-tools">
+      <span class="v-count" aria-live="polite">{{v.counter}}</span>
+      <button class="v-close" type="button" aria-label="Close gallery" onClick="{{close}}"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    </div>
+  </div>
+  <div class="v-body solo">
+    <div>
+      <div class="v-stage" onTouchStart="{{swStart}}" onTouchEnd="{{swEnd}}">
+        <img class="v-img {{anim}}" src="{{v.src}}" alt="{{v.alt}}"><img class="pre" src="{{nextSrc}}" alt="" aria-hidden="true"><img class="pre" src="{{prevSrc}}" alt="" aria-hidden="true">
+        <sc-if value="{{v.hasMany}}" hint-placeholder-val="{{ true }}">
+          <button class="v-nav v-prev" type="button" aria-label="Previous photo" onClick="{{prev}}"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+          <button class="v-nav v-next" type="button" aria-label="Next photo" onClick="{{next}}"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+        </sc-if>
+      </div>
+      <div class="v-strip">
+        <sc-for list="{{v.thumbs}}" as="t" hint-placeholder-count="6">
+          <button class="v-thumb {{t.cls}}" type="button" aria-label="{{t.label}}" aria-current="{{t.current}}" onClick="{{t.go}}"><img loading="lazy" decoding="async" src="{{t.src}}" alt=""></button>
+        </sc-for>
+      </div>
+      <div class="v-foot"><span>{{v.showing}}<span class="swipe-hint"> · Swipe to browse</span></span><a href="{{v.src}}" target="_blank" rel="noopener">Full resolution ↗</a></div>
+    </div>
+    
+  </div>
+</section></div>
+        </sc-if>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="nx" aria-label="Up next">
+    <div class="wrap">
+      <a class="nx-card nx-dark reveal" href="contact.html">
+        <span class="nx-copy">
+          <span class="nx-eb">Up next</span>
+          <span class="nx-title">Get in touch.<span class="nx-arrow" aria-hidden="true"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span>
+        </span>
+      </a>
+    </div>
+  </section>
+</main>
+<footer class="sf">
+    <div class="sf-in">
+      <div class="sf-top">
+        <a class="sh-logo" href="index.html">Madden's Adventures<span class="sh-dot" aria-hidden="true"></span></a>
+        <p class="sf-line">Little moments, big adventures.</p>
+      </div>
+      <div class="sf-grid">
+        <div><p class="sf-h">Explore</p><a href="index.html">Home</a><a href="about.html">About</a><a href="chalk-art.html">Chalk Art</a><a href="moments.html">Moments</a><a href="adventures.html">Adventures</a></div>
+        <div><p class="sf-h">Galleries</p><a href="chalk-art.html">Chalk Art Festivals</a><a href="moments.html">Major</a><a href="moments.html">Gear Head</a><a href="adventures.html">Vietnam</a></div>
+        <div><p class="sf-h">Say hello</p><a href="contact.html">Contact</a><a href="https://www.instagram.com/majorsquest/" target="_blank" rel="noopener">Instagram @majorsquest</a><a href="https://www.linkedin.com/in/amy-madden-b2183a4/" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
+      <div class="sf-bot"><span>© 2026 Amy Madden</span><span class="sf-chalk">Less talk, more chalk.</span><a class="sf-up" href="#top">Back to top ↑</a></div>
+    </div>
+  </footer>
+</div>
+</template>
+<script src="assets/js/dc-lite.js"></script>
+<script>
+class Component extends DCLogic {
+  renderVals() {
+    const v = this._pageVals();
+    const open = !!(this.state && this.state.shOpen);
+    v.sh = {
+      cls: open ? 'is-open' : '',
+      exp: open ? 'true' : 'false',
+      label: open ? 'Close menu' : 'Open menu',
+      toggle: () => this.setState({ shOpen: !open }),
+      close: () => this.setState({ shOpen: false }),
+      key: (e) => { if (e && e.key === 'Escape' && open) this.setState({ shOpen: false }); }
+    };
+    return v;
+  }
+
+  _narrow() { try { return !!(window.matchMedia && window.matchMedia('(max-width: 700px)').matches); } catch (e) { return false; } }
+  componentDidMount() { if (super.componentDidMount) super.componentDidMount(); this._lastOpen = this._openNow; }
+  componentDidUpdate(a, b, c) {
+    if (super.componentDidUpdate) super.componentDidUpdate(a, b, c);
+    const cur = this._openNow;
+    if (cur && cur !== this._lastOpen) { this._reveal(); this._focusViewer(); }
+    else if (!cur && this._lastOpen) { this._returnToCard(this._lastOpen); }
+    else if (cur && this._photoNow !== this._lastPhoto) { this._centerThumb(); }
+    this._lastOpen = cur;
+    this._lastPhoto = this._photoNow;
+  }
+  _closeAnimated() {
+    if (this._closingT) return;
+    let reduce = false;
+    try { reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) {}
+    this.setState({ closing: true });
+    this._closingT = setTimeout(() => {
+      this._closingT = null;
+      if (this.state && this.state.closing) this.setState({ openId: null, photo: 0, closing: false });
+    }, reduce ? 0 : 190);
+  }
+  _keys(next, prev, close) {
+    return (e) => {
+      if (!e) return;
+      if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+      else if (e.key === 'Escape') { e.preventDefault(); close(); }
+    };
+  }
+  _focusViewer() { try { const el = document.querySelector('[data-viewer]'); if (el) el.focus({ preventScroll: true }); } catch (e) {} }
+  _returnToCard(id) {
+    try {
+      const el = document.querySelector('[data-card="' + id + '"]');
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight || 0;
+      if (r.top < 60 || r.top > vh - 120) {
+        const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: Math.max(0, (window.pageYOffset || 0) + r.top - 80), behavior: reduce ? 'auto' : 'smooth' });
+      }
+      el.focus({ preventScroll: true });
+    } catch (e) {}
+  }
+  _centerThumb() {
+    try {
+      const t = document.querySelector('[data-viewer] [aria-current="true"]');
+      const strip = t && t.closest('.strip, .v-strip');
+      if (!strip) return;
+      const sr = strip.getBoundingClientRect();
+      const tr = t.getBoundingClientRect();
+      strip.scrollBy({ left: (tr.left + tr.width / 2) - (sr.left + sr.width / 2), behavior: 'smooth' });
+    } catch (e) {}
+  }
+  _reveal() {
+    try {
+      const el = document.querySelector('[data-viewer]');
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight || 0;
+      if (r.top >= 60 && r.top <= vh * 0.45) return;
+      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: Math.max(0, (window.pageYOffset || 0) + r.top - 68), behavior: reduce ? 'auto' : 'smooth' });
+    } catch (e) {}
+  }
+  _swipe(next, prev) {
+    return {
+      start: (e) => {
+        const t = e && e.touches && e.touches[0];
+        this._sx = t ? t.clientX : null;
+        this._sy = t ? t.clientY : null;
+      },
+      end: (e) => {
+        const t = e && e.changedTouches && e.changedTouches[0];
+        if (!t || this._sx == null) return;
+        const dx = t.clientX - this._sx;
+        const dy = t.clientY - this._sy;
+        this._sx = null;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.3) { if (dx < 0) next(); else prev(); }
+      }
+    };
+  }
+  _pageVals() {
+    const DEFAULT_OPEN = 'vietnam-2019';
+    const VORDER = { 'vietnam-2017': 2, 'vietnam-2019': 4, 'california-washington': 6, 'ojai': 2, 'paso-robles': 4 };
+    const G = {
+      'vietnam-2017': { eyebrow: "Adventures · 2017", title: "Vietnam Trip #1", total: 5, photos: [{"src": "assets/img/g-vietnam-2017-01.webp", "w": 960, "h": 640}, {"src": "assets/img/g-vietnam-2017-02.webp", "w": 960, "h": 640}, {"src": "assets/img/g-vietnam-2017-03.webp", "w": 960, "h": 1440}, {"src": "assets/img/g-vietnam-2017-04.webp", "w": 960, "h": 640}, {"src": "assets/img/g-vietnam-2017-05.webp", "w": 960, "h": 1440}] },
+      'vietnam-2019': { eyebrow: "Adventures · 2019", title: "Vietnam Trip #2", total: 43, photos: [{"src": "assets/img/g-vietnam-2019-01.webp", "w": 480, "h": 270}, {"src": "assets/img/g-vietnam-2019-02.webp", "w": 480, "h": 270}, {"src": "assets/img/g-vietnam-2019-03.webp", "w": 960, "h": 1706}, {"src": "assets/img/g-vietnam-2019-04.webp", "w": 960, "h": 1706}, {"src": "assets/img/g-vietnam-2019-05.webp", "w": 960, "h": 540}, {"src": "assets/img/g-vietnam-2019-06.webp", "w": 480, "h": 640}] },
+      'california-washington': { eyebrow: "Adventures · June 2021", title: "CA. to WA.", total: 63, photos: [{"src": "assets/img/g-california-washington-01.webp", "w": 960, "h": 720}, {"src": "assets/img/g-california-washington-02.webp", "w": 960, "h": 720}, {"src": "assets/img/g-california-washington-03.webp", "w": 960, "h": 720}, {"src": "assets/img/g-california-washington-04.webp", "w": 960, "h": 1280}, {"src": "assets/img/g-california-washington-05.webp", "w": 960, "h": 1280}] },
+      'ojai': { eyebrow: "Adventures", title: "Ojai, CA", total: 4, photos: [{"src": "assets/img/g-ojai-ca-01.webp", "w": 960, "h": 640}, {"src": "assets/img/g-ojai-ca-02.webp", "w": 960, "h": 1280}, {"src": "assets/img/g-ojai-ca-03.webp", "w": 960, "h": 1280}, {"src": "assets/img/g-ojai-ca-04.webp", "w": 960, "h": 640}] },
+      'paso-robles': { eyebrow: "Adventures", title: "Paso Robles, CA", total: 4, photos: [{"src": "assets/img/g-paso-robles-ca-01.webp", "w": 439, "h": 292}] }
+    };
+
+    const s = this.state || {};
+    const openId = s.openId === undefined ? (this._narrow() ? null : DEFAULT_OPEN) : s.openId;
+    const g = openId ? G[openId] : null;
+    const n = g ? g.photos.length : 0;
+    const raw = s.photo || 0;
+    const idx = n ? ((raw % n) + n) % n : 0;
+    const open = (id) => (openId === id ? this._closeAnimated() : this.setState({ openId: id, photo: 0, closing: false, dir: 'j' }));
+    const close = () => this._closeAnimated();
+    const go = (i) => this.setState({ photo: i, dir: 'j', tick: (s.tick || 0) + 1 });
+    const next = () => this.setState({ photo: n ? (idx + 1) % n : 0, dir: 'n', tick: (s.tick || 0) + 1 });
+    const prev = () => this.setState({ photo: n ? (idx - 1 + n) % n : 0, dir: 'p', tick: (s.tick || 0) + 1 });
+    const cur = g ? g.photos[idx] : { src: '' };
+    const sw = this._swipe(next, prev);
+    this._openNow = openId || null;
+    this._photoNow = idx;
+    const v = g ? {
+      eyebrow: g.eyebrow,
+      title: g.title,
+      counter: (idx + 1) + ' / ' + n,
+      src: cur.src,
+      alt: g.title + ', photo ' + (idx + 1) + ' of ' + n,
+      showing: 'Showing ' + n + ' of ' + g.total + ' photos',
+      hasMany: n > 1,
+      thumbs: g.photos.map((p, i) => ({
+        src: p.src,
+        label: 'Photo ' + (i + 1),
+        isActive: i === idx,
+        cls: i === idx ? 'is-on' : '',
+        current: i === idx ? 'true' : 'false',
+        ringStyle: i === idx ? 'box-shadow:0 0 0 2px #F6C453;opacity:1' : 'opacity:.55',
+        go: () => go(i)
+      }))
+    } : { eyebrow: '', title: '', counter: '', src: '', alt: '', showing: '', hasMany: false, thumbs: [] };
+    const card = (id, total) => {
+      const on = openId === id;
+      return {
+        on: on,
+        cls: on ? 'is-on' : '',
+        exp: on ? 'true' : 'false',
+        cta: on ? 'Now viewing' : 'View photos',
+        count: total + ' photos',
+        open: () => open(id)
+      };
+    };
+
+    const navFlag = !!s.navOpen;
+    const TRIPS = ['vietnam-2017', 'vietnam-2019', 'california-washington'];
+    const MORE = ['ojai', 'paso-robles'];
+    const stop = (id) => ({ cls: openId === id ? 'is-on' : '' });
+    const EXTRA = {
+      t: { v17: card('vietnam-2017', 5), v19: card('vietnam-2019', 43), caw: card('california-washington', 63),
+           ojai: card('ojai', 4), paso: card('paso-robles', 4) },
+      tl: { v17: stop('vietnam-2017'), v19: stop('vietnam-2019'), caw: stop('california-washington') },
+      tripOpen: TRIPS.indexOf(openId) > -1,
+      moreOpen: MORE.indexOf(openId) > -1,
+      isV17: openId === 'vietnam-2017',
+      isV19: openId === 'vietnam-2019',
+      isCaw: openId === 'california-washington'
+    };
+    return Object.assign({
+      navOpen: navFlag,
+      navOpenClosed: !navFlag,
+      navOpenStr: navFlag ? 'true' : 'false',
+      toggleNav: () => this.setState({ navOpen: !navFlag }),
+      openId: openId,
+      isOpen: !!g,
+      v: v,
+      close: close, next: next, prev: prev,
+      swStart: sw.start, swEnd: sw.end,
+      vClosing: s.closing ? 'is-closing' : '',
+      anim: 'ph-' + (s.dir || 'j') + ((s.tick || 0) % 2),
+      nextSrc: g ? g.photos[(idx + 1) % n].src : '',
+      prevSrc: g ? g.photos[(idx - 1 + n) % n].src : '',
+      onKey: this._keys(next, prev, close),
+      vOrder: VORDER[openId] || 99,
+      open: open, go: go
+    }, EXTRA);
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>
