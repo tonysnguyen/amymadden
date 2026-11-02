@@ -185,12 +185,26 @@
     checked[dir] = true;
     if (!window.fetch || location.protocol === 'file:') return;
     pending[dir] = true;
-    var list = [], misses = 0, i = 1;
+    var fb = fallbackOf[dir] || [];
+    var list = fb.slice(), misses = 0, i = 1;
     var hint = {};
-    (fallbackOf[dir] || []).forEach(function (src) {
+    fb.forEach(function (src) {
       var m = /\/(\d+)\.(\w+)$/.exec(src);
       if (m) hint[parseInt(m[1], 10)] = m[2];
     });
+    // 1) the page already lists the known photos: make sure the last one is still there
+    //    (if photos were removed, trim the list back to the last one that exists)
+    function confirmTail() {
+      if (!list.length) { i = 1; return nextNumber(); }
+      exists(list[list.length - 1]).then(function (ok) {
+        if (ok === null) { pending[dir] = false; return; }
+        if (ok) { i = list.length + 1; return nextNumber(); }
+        list.pop();
+        if (!list.length) { i = 1; return nextNumber(); }
+        confirmTail();
+      });
+    }
+    // 2) look for new photos after the last known number (01, 02 … in any supported format)
     function nextNumber() {
       if (misses >= 2 || i > 99) return finish();
       var order = EXTS.slice();
@@ -202,15 +216,16 @@
       var url = 'assets/img/' + dir + '/' + pad(i) + '.' + order[k];
       exists(url).then(function (ok) {
         if (ok === null) { pending[dir] = false; return; }          // offline / not served over http: keep the page's list
-        if (ok) { list.push(url); misses = 0; i++; return nextNumber(); }
+        if (ok) { list.length = i - 1 > list.length ? list.length : i - 1; list.push(url); misses = 0; i++; return nextNumber(); }
         tryExt(order, k + 1);
       });
     }
     function finish() {
       pending[dir] = false;
-      if (list.length) { found[dir] = list; refresh(); }
+      var same = list.length === fb.length && list.every(function (u, n) { return u === fb[n]; });
+      if (list.length && !same) { found[dir] = list; refresh(); }
     }
-    nextNumber();
+    confirmTail();
   }
 
   // GAL('chalk-art/velvet-cat', [...]) -> the photos in that folder (or the page's list until checked)
