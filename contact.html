@@ -468,12 +468,20 @@ class Component extends DCLogic {
       fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ firstName: st.first || '', lastName: st.last || '', email: st.email || '',
-                               subject: st.subject || '', message: st.message || '', _subject: st.subject || 'New message from maddenadventures.com' })
-      }).then((r) => {
-        if (!r.ok) throw new Error('send failed');
+        body: JSON.stringify({
+          name: ((st.first || '') + ' ' + (st.last || '')).trim(),
+          email: st.email || '',
+          subject: st.subject || '',
+          message: st.message || '',
+          _replyto: st.email || '',
+          _subject: 'Madden’s Adventures: ' + (st.subject || 'new message from the website'),
+          _template: 'table',
+          _captcha: 'false'
+        })
+      }).then((r) => r.json().catch(() => ({})).then((j) => {
+        if (!r.ok || j.success === false || j.success === 'false') throw new Error('send failed');
         this.setState({ phase: 'sent' }); focusEl(P + 'done');
-      }).catch(() => { this.setState({ phase: 'form', failed: true }); });
+      })).catch(() => { this.setState({ phase: 'form', failed: true }); });
     };
     const reset = () => {
       this.setState({ first: '', last: '', email: '', subject: '', message: '', tried: false, phase: 'form' });

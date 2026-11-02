@@ -11,6 +11,9 @@
  *   <sc-if value="{{flag}}">…</sc-if>      render children when flag is truthy
  *   <sc-for list="{{items}}" as="item">  repeat children for each item ($index available)
  *   onClick / onChange / onKeyDown / onSubmit / onTouchStart / onTouchEnd = "{{handler}}"
+ *
+ * Images: galleries pick up numbered photos (01, 02, 03 …) found in their folder, and an image
+ * whose file was replaced with another format (.webp / .jpg / .jpeg / .png) still loads.
  */
 (function () {
   'use strict';
@@ -83,6 +86,7 @@
         continue;
       }
       var val = evalAttr(raw, scope);
+      if (lname === 'src' && typeof val === 'string' && altSrc[val]) val = altSrc[val];
       if (lname === 'value' && (tag === 'input' || tag === 'textarea' || tag === 'select')) { el.__value = str(val); continue; }
       if (BOOL[lname]) { if (val && val !== 'false') el.setAttribute(name, ''); continue; }
       if (val == null) continue;
@@ -157,6 +161,98 @@
     while (parent.childNodes.length > result.length) parent.removeChild(parent.lastChild);
   }
 
+  // ---------------------------------------------------------------- images that update themselves
+  // Galleries: each gallery folder is checked for numbered photos (01, 02, 03 … in .webp/.jpg/.jpeg/.png),
+  // so dropping 07.webp into a folder adds it to that gallery — no code changes needed.
+  // Covers: if an image is missing (say cover.webp was replaced by cover.jpg), the other formats are tried.
+  var EXTS = ['webp', 'jpg', 'jpeg', 'png'];
+  var found = {};      // gallery folder -> list of photo URLs that exist
+  var pending = {};    // gallery folder -> true while being checked
+  var checked = {};    // gallery folder -> already checked (found or not)
+  var fallbackOf = {}; // gallery folder -> the photo list written in the page
+  var altSrc = {};     // image URL -> working URL in another format
+  var components = [];
+
+  function pad(n) { return n < 10 ? '0' + n : String(n); }
+
+  function exists(url) {
+    return fetch(url, { method: 'HEAD', cache: 'no-cache' })
+      .then(function (r) { return r.ok; }, function () { return null; });
+  }
+
+  function probeGallery(dir) {
+    if (pending[dir] || found[dir] || checked[dir]) return;
+    checked[dir] = true;
+    if (!window.fetch || location.protocol === 'file:') return;
+    pending[dir] = true;
+    var list = [], misses = 0, i = 1;
+    var hint = {};
+    (fallbackOf[dir] || []).forEach(function (src) {
+      var m = /\/(\d+)\.(\w+)$/.exec(src);
+      if (m) hint[parseInt(m[1], 10)] = m[2];
+    });
+    function nextNumber() {
+      if (misses >= 2 || i > 99) return finish();
+      var order = EXTS.slice();
+      if (hint[i]) { order.splice(order.indexOf(hint[i]), 1); order.unshift(hint[i]); }
+      tryExt(order, 0);
+    }
+    function tryExt(order, k) {
+      if (k >= order.length) { misses++; i++; return nextNumber(); }
+      var url = 'assets/img/' + dir + '/' + pad(i) + '.' + order[k];
+      exists(url).then(function (ok) {
+        if (ok === null) { pending[dir] = false; return; }          // offline / not served over http: keep the page's list
+        if (ok) { list.push(url); misses = 0; i++; return nextNumber(); }
+        tryExt(order, k + 1);
+      });
+    }
+    function finish() {
+      pending[dir] = false;
+      if (list.length) { found[dir] = list; refresh(); }
+    }
+    nextNumber();
+  }
+
+  // GAL('chalk-art/velvet-cat', [...]) -> the photos in that folder (or the page's list until checked)
+  function GAL(dir, fallback) {
+    fallbackOf[dir] = (fallback || []).map(function (p) { return typeof p === 'string' ? p : p.src; });
+    if (!found[dir]) { schedule(dir); return fallback; }
+    var asObjects = fallback && fallback.length && typeof fallback[0] !== 'string';
+    return found[dir].map(function (src) { return asObjects ? { src: src } : src; });
+  }
+
+  var queue = [], queued = false;
+  function schedule(dir) {
+    if (pending[dir] || checked[dir] || queue.indexOf(dir) > -1) return;
+    queue.push(dir);
+    if (queued) return;
+    queued = true;
+    setTimeout(function () {
+      queued = false;
+      var q = queue.splice(0);
+      q.forEach(probeGallery);
+    }, 400);
+  }
+
+  function refresh() { components.forEach(function (c) { c.forceUpdate(); }); }
+
+  document.addEventListener('error', function (e) {
+    var img = e.target;
+    if (!img || img.tagName !== 'IMG') return;
+    var src = img.getAttribute('src') || '';
+    var m = /^(.*assets\/img\/.*\.)(webp|jpg|jpeg|png)$/.exec(src);
+    if (!m) return;
+    var orig = img.__origSrc || src;
+    img.__origSrc = orig;
+    var tried = img.__tried || (img.__tried = [m[2]]);
+    var next = EXTS.filter(function (x) { return tried.indexOf(x) < 0; })[0];
+    if (!next) return;
+    tried.push(next);
+    var url = m[1] + next;
+    altSrc[orig] = url;
+    img.setAttribute('src', url);
+  }, true);
+
   // ---------------------------------------------------------------- component base + mount
   function DCLogic() { this.props = {}; this.state = {}; }
   DCLogic.prototype.setState = function (patchObj) {
@@ -170,6 +266,7 @@
     var tpl = document.getElementById('dc-template');
     var root = document.getElementById('dc-root');
     var c = new Component();
+    components.push(c);
     c.props = c.props || {};
     c.state = c.state || {};
     var mounted = false, queued = false;
@@ -193,4 +290,5 @@
 
   window.DCLogic = DCLogic;
   window.DC = { mount: mount };
+  window.GAL = GAL;
 })();

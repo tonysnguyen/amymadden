@@ -1,0 +1,6 @@
+# Kept on this computer, not uploaded to GitHub
+_archive/
+
+# macOS / Windows clutter
+.DS_Store
+Thumbs.db

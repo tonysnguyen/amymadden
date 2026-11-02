@@ -395,19 +395,19 @@ a, button { -webkit-tap-highlight-color: transparent; }
       <div class="sec-head reveal"><h2 class="eyebrow" id="ch-label">Chapters</h2><p class="hint">Choose a chapter to open its photos.</p></div>
       <div class="ch-row">
         <button class="ch tile {{c.major.cls}}" data-card="major" style="order:1;" type="button" aria-expanded="{{c.major.exp}}" onClick="{{c.major.open}}">
-          <span class="ch-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/moments-major.webp" alt="Major, the rescue pup" style="object-position:center 30%"></span>
+          <span class="ch-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/moments/major/cover.webp" alt="Major, the rescue pup" style="object-position:center 30%"></span>
           <span class="ch-scrim" aria-hidden="true"></span>
           <span class="ch-dot" aria-hidden="true"></span>
           <span class="ch-text"><span class="ch-title">Major Love</span><span class="ch-pill">Woof!<span class="n">24 photos</span></span></span>
         </button>
         <button class="ch tile {{c.gear.cls}}" data-card="gear-head" style="order:3;" type="button" aria-expanded="{{c.gear.exp}}" onClick="{{c.gear.open}}">
-          <span class="ch-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/moments-gearhead.png" alt="The 1971 Datsun 240z" style="object-position:center"></span>
+          <span class="ch-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/moments/gear-head/cover.png" alt="The 1971 Datsun 240z" style="object-position:center"></span>
           <span class="ch-scrim" aria-hidden="true"></span>
           <span class="ch-dot" aria-hidden="true"></span>
           <span class="ch-text"><span class="ch-title">Gear Head</span><span class="ch-pill">Vroom<span class="n">32 photos</span></span></span>
         </button>
         <button class="ch tile {{c.camp.cls}}" data-card="camping-family-fun" style="order:5;" type="button" aria-expanded="{{c.camp.exp}}" onClick="{{c.camp.open}}">
-          <span class="ch-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/moments-camping.webp" alt="Camping with family and friends" style="object-position:center"></span>
+          <span class="ch-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/moments/camping-family-fun/cover.webp" alt="Camping with family and friends" style="object-position:center"></span>
           <span class="ch-scrim" aria-hidden="true"></span>
           <span class="ch-dot" aria-hidden="true"></span>
           <span class="ch-text"><span class="ch-title">Camping, Family, Fun.</span><span class="ch-pill">Check it out<span class="n">56 photos</span></span></span>
@@ -469,7 +469,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
           <span class="nx-title">Adventures<span class="nx-arrow" aria-hidden="true"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span>
           <span class="nx-text">Photography of adventures taken both internationally and domestically in the US. Vietnam, CA, WA etc. Let’s explore!</span>
         </span>
-        <span class="nx-frame"><img loading="lazy" decoding="async" src="assets/img/adventures-card.webp" alt="Travel photo from Amy's first trip to Vietnam"></span>
+        <span class="nx-frame"><img loading="lazy" decoding="async" src="assets/img/adventures/vietnam-2017/cover.webp" alt="Travel photo from Amy's first trip to Vietnam"></span>
       </a>
     </div>
   </section>
@@ -592,9 +592,9 @@ class Component extends DCLogic {
     const DEFAULT_OPEN = 'major';
     const VORDER = { 'major': 2, 'gear-head': 4, 'camping-family-fun': 6 };
     const G = {
-      'major': { eyebrow: "Moments", title: "Major Love", total: 24, photos: [{"src": "assets/img/g-major-01.webp", "w": 960, "h": 720}, {"src": "assets/img/g-major-02.webp", "w": 960, "h": 960}, {"src": "assets/img/g-major-03.webp", "w": 960, "h": 1280}, {"src": "assets/img/g-major-04.webp", "w": 960, "h": 1345}, {"src": "assets/img/g-major-05.webp", "w": 960, "h": 1280}, {"src": "assets/img/g-major-06.webp", "w": 960, "h": 1280}] },
-      'gear-head': { eyebrow: "Moments", title: "Gear Head", total: 32, photos: [{"src": "assets/img/g-gear-head-01.webp", "w": 960, "h": 540}, {"src": "assets/img/g-gear-head-02.webp", "w": 960, "h": 752}, {"src": "assets/img/g-gear-head-03.webp", "w": 960, "h": 1280}, {"src": "assets/img/g-gear-head-04.webp", "w": 960, "h": 1280}, {"src": "assets/img/g-gear-head-05.webp", "w": 960, "h": 720}, {"src": "assets/img/g-gear-head-06.webp", "w": 960, "h": 720}] },
-      'camping-family-fun': { eyebrow: "Moments", title: "Camping, Family, Fun.", total: 56, photos: [{"src": "assets/img/g-campingfamily-fun-01.webp", "w": 960, "h": 1280}, {"src": "assets/img/g-campingfamily-fun-02.webp", "w": 960, "h": 720}, {"src": "assets/img/g-campingfamily-fun-03.webp", "w": 960, "h": 720}, {"src": "assets/img/g-campingfamily-fun-04.webp", "w": 960, "h": 721}, {"src": "assets/img/g-campingfamily-fun-05.webp", "w": 960, "h": 1280}, {"src": "assets/img/g-campingfamily-fun-06.webp", "w": 960, "h": 720}] }
+      'major': { eyebrow: "Moments", title: "Major Love", total: 24, photos: GAL('moments/major', [{"src": "assets/img/moments/major/01.webp", "w": 960, "h": 720}, {"src": "assets/img/moments/major/02.webp", "w": 960, "h": 960}, {"src": "assets/img/moments/major/03.webp", "w": 960, "h": 1280}, {"src": "assets/img/moments/major/04.webp", "w": 960, "h": 1345}, {"src": "assets/img/moments/major/05.webp", "w": 960, "h": 1280}, {"src": "assets/img/moments/major/06.webp", "w": 960, "h": 1280}]) },
+      'gear-head': { eyebrow: "Moments", title: "Gear Head", total: 32, photos: GAL('moments/gear-head', [{"src": "assets/img/moments/gear-head/01.webp", "w": 960, "h": 540}, {"src": "assets/img/moments/gear-head/02.webp", "w": 960, "h": 752}, {"src": "assets/img/moments/gear-head/03.webp", "w": 960, "h": 1280}, {"src": "assets/img/moments/gear-head/04.webp", "w": 960, "h": 1280}, {"src": "assets/img/moments/gear-head/05.webp", "w": 960, "h": 720}, {"src": "assets/img/moments/gear-head/06.webp", "w": 960, "h": 720}]) },
+      'camping-family-fun': { eyebrow: "Moments", title: "Camping, Family, Fun.", total: 56, photos: GAL('moments/camping-family-fun', [{"src": "assets/img/moments/camping-family-fun/01.webp", "w": 960, "h": 1280}, {"src": "assets/img/moments/camping-family-fun/02.webp", "w": 960, "h": 720}, {"src": "assets/img/moments/camping-family-fun/03.webp", "w": 960, "h": 720}, {"src": "assets/img/moments/camping-family-fun/04.webp", "w": 960, "h": 721}, {"src": "assets/img/moments/camping-family-fun/05.webp", "w": 960, "h": 1280}, {"src": "assets/img/moments/camping-family-fun/06.webp", "w": 960, "h": 720}]) }
     };
 
     const s = this.state || {};
@@ -618,7 +618,7 @@ class Component extends DCLogic {
       counter: (idx + 1) + ' / ' + n,
       src: cur.src,
       alt: g.title + ', photo ' + (idx + 1) + ' of ' + n,
-      showing: 'Showing ' + n + ' of ' + g.total + ' photos',
+      showing: (n >= g.total ? n + ' photos' : 'Showing ' + n + ' of ' + g.total + ' photos'),
       hasMany: n > 1,
       thumbs: g.photos.map((p, i) => ({
         src: p.src,

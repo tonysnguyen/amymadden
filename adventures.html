@@ -431,7 +431,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   <section class="a-hero">
     <div class="wrap">
       <figure class="hero reveal">
-        <img src="assets/img/adventures-banner.webp" alt="Adventures banner photo">
+        <img src="assets/img/adventures/banner.webp" alt="Adventures banner photo">
         <span class="hero-scrim" aria-hidden="true"></span>
         <figcaption class="hero-cap">
           <h1 class="eyebrow">Adventures</h1>
@@ -447,7 +447,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
       <ol class="tl" aria-label="Timeline"><li class="tl-stop c-yellow {{tl.v17.cls}}"><span class="tl-dot" aria-hidden="true"></span><p class="tl-year">2017</p></li><li class="tl-stop c-pink {{tl.v19.cls}}"><span class="tl-dot" aria-hidden="true"></span><p class="tl-year">2019</p></li><li class="tl-stop c-mint {{tl.caw.cls}}"><span class="tl-dot" aria-hidden="true"></span><p class="tl-year">2021</p></li></ol>
       <div class="trips">
         <button class="trip tile c-yellow {{t.v17.cls}}" data-card="vietnam-2017" style="order:1;" type="button" aria-expanded="{{t.v17.exp}}" onClick="{{t.v17.open}}">
-          <span class="trip-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/adventures-card.webp" alt="Vietnam, 2017" style="object-position:center"></span>
+          <span class="trip-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/adventures/vietnam-2017/cover.webp" alt="Vietnam, 2017" style="object-position:center"></span>
           <span class="trip-body">
             <span class="chip">2017</span>
             <span class="trip-title">Vietnam Trip #1</span>
@@ -457,7 +457,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
           </span>
         </button>
         <button class="trip tile c-pink {{t.v19.cls}}" data-card="vietnam-2019" style="order:3;" type="button" aria-expanded="{{t.v19.exp}}" onClick="{{t.v19.open}}">
-          <span class="trip-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/trip-vietnam-2019.webp" alt="Vietnam, 2019" style="object-position:center"></span>
+          <span class="trip-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/adventures/vietnam-2019/cover.webp" alt="Vietnam, 2019" style="object-position:center"></span>
           <span class="trip-body">
             <span class="chip">2019</span>
             <span class="trip-title">Vietnam Trip #2</span>
@@ -467,7 +467,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
           </span>
         </button>
         <button class="trip tile c-mint {{t.caw.cls}}" data-card="california-washington" style="order:5;" type="button" aria-expanded="{{t.caw.exp}}" onClick="{{t.caw.open}}">
-          <span class="trip-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/trip-ca-wa.webp" alt="On the road from California to Washington" style="object-position:center 40%"></span>
+          <span class="trip-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/adventures/ca-to-wa/cover.webp" alt="On the road from California to Washington" style="object-position:center 40%"></span>
           <span class="trip-body">
             <span class="chip">June 2021</span>
             <span class="trip-title">CA. to WA.</span>
@@ -522,12 +522,12 @@ a, button { -webkit-tap-highlight-color: transparent; }
         <h3 class="eyebrow mint more-label">More road trips</h3>
         <div class="more-row">
         <button class="rt tile {{t.ojai.cls}}" data-card="ojai" style="order:1;" type="button" aria-expanded="{{t.ojai.exp}}" onClick="{{t.ojai.open}}">
-          <span class="rt-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/g-ojai-ca-01.webp" alt="Ojai, California"></span>
+          <span class="rt-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/adventures/ojai/01.webp" alt="Ojai, California"></span>
           <span class="rt-txt"><span class="rt-title">Ojai, CA</span><span class="rt-n">4 photos</span></span>
           <span class="rt-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></span>
         </button>
         <button class="rt tile {{t.paso.cls}}" data-card="paso-robles" style="order:3;" type="button" aria-expanded="{{t.paso.exp}}" onClick="{{t.paso.open}}">
-          <span class="rt-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/g-paso-robles-ca-01.webp" alt="Paso Robles, California"></span>
+          <span class="rt-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/adventures/paso-robles/01.webp" alt="Paso Robles, California"></span>
           <span class="rt-txt"><span class="rt-title">Paso Robles, CA</span><span class="rt-n">4 photos</span></span>
           <span class="rt-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></span>
         </button>
@@ -693,11 +693,11 @@ class Component extends DCLogic {
     const DEFAULT_OPEN = 'vietnam-2019';
     const VORDER = { 'vietnam-2017': 2, 'vietnam-2019': 4, 'california-washington': 6, 'ojai': 2, 'paso-robles': 4 };
     const G = {
-      'vietnam-2017': { eyebrow: "Adventures · 2017", title: "Vietnam Trip #1", total: 5, photos: [{"src": "assets/img/g-vietnam-2017-01.webp", "w": 960, "h": 640}, {"src": "assets/img/g-vietnam-2017-02.webp", "w": 960, "h": 640}, {"src": "assets/img/g-vietnam-2017-03.webp", "w": 960, "h": 1440}, {"src": "assets/img/g-vietnam-2017-04.webp", "w": 960, "h": 640}, {"src": "assets/img/g-vietnam-2017-05.webp", "w": 960, "h": 1440}] },
-      'vietnam-2019': { eyebrow: "Adventures · 2019", title: "Vietnam Trip #2", total: 43, photos: [{"src": "assets/img/g-vietnam-2019-01.webp", "w": 480, "h": 270}, {"src": "assets/img/g-vietnam-2019-02.webp", "w": 480, "h": 270}, {"src": "assets/img/g-vietnam-2019-03.webp", "w": 960, "h": 1706}, {"src": "assets/img/g-vietnam-2019-04.webp", "w": 960, "h": 1706}, {"src": "assets/img/g-vietnam-2019-05.webp", "w": 960, "h": 540}, {"src": "assets/img/g-vietnam-2019-06.webp", "w": 480, "h": 640}] },
-      'california-washington': { eyebrow: "Adventures · June 2021", title: "CA. to WA.", total: 63, photos: [{"src": "assets/img/g-california-washington-01.webp", "w": 960, "h": 720}, {"src": "assets/img/g-california-washington-02.webp", "w": 960, "h": 720}, {"src": "assets/img/g-california-washington-03.webp", "w": 960, "h": 720}, {"src": "assets/img/g-california-washington-04.webp", "w": 960, "h": 1280}, {"src": "assets/img/g-california-washington-05.webp", "w": 960, "h": 1280}] },
-      'ojai': { eyebrow: "Adventures", title: "Ojai, CA", total: 4, photos: [{"src": "assets/img/g-ojai-ca-01.webp", "w": 960, "h": 640}, {"src": "assets/img/g-ojai-ca-02.webp", "w": 960, "h": 1280}, {"src": "assets/img/g-ojai-ca-03.webp", "w": 960, "h": 1280}, {"src": "assets/img/g-ojai-ca-04.webp", "w": 960, "h": 640}] },
-      'paso-robles': { eyebrow: "Adventures", title: "Paso Robles, CA", total: 4, photos: [{"src": "assets/img/g-paso-robles-ca-01.webp", "w": 439, "h": 292}] }
+      'vietnam-2017': { eyebrow: "Adventures · 2017", title: "Vietnam Trip #1", total: 5, photos: GAL('adventures/vietnam-2017', [{"src": "assets/img/adventures/vietnam-2017/01.webp", "w": 960, "h": 640}, {"src": "assets/img/adventures/vietnam-2017/02.webp", "w": 960, "h": 640}, {"src": "assets/img/adventures/vietnam-2017/03.webp", "w": 960, "h": 1440}, {"src": "assets/img/adventures/vietnam-2017/04.webp", "w": 960, "h": 640}, {"src": "assets/img/adventures/vietnam-2017/05.webp", "w": 960, "h": 1440}]) },
+      'vietnam-2019': { eyebrow: "Adventures · 2019", title: "Vietnam Trip #2", total: 43, photos: GAL('adventures/vietnam-2019', [{"src": "assets/img/adventures/vietnam-2019/01.webp", "w": 480, "h": 270}, {"src": "assets/img/adventures/vietnam-2019/02.webp", "w": 480, "h": 270}, {"src": "assets/img/adventures/vietnam-2019/03.webp", "w": 960, "h": 1706}, {"src": "assets/img/adventures/vietnam-2019/04.webp", "w": 960, "h": 1706}, {"src": "assets/img/adventures/vietnam-2019/05.webp", "w": 960, "h": 540}, {"src": "assets/img/adventures/vietnam-2019/06.webp", "w": 480, "h": 640}]) },
+      'california-washington': { eyebrow: "Adventures · June 2021", title: "CA. to WA.", total: 63, photos: GAL('adventures/ca-to-wa', [{"src": "assets/img/adventures/ca-to-wa/01.webp", "w": 960, "h": 720}, {"src": "assets/img/adventures/ca-to-wa/02.webp", "w": 960, "h": 720}, {"src": "assets/img/adventures/ca-to-wa/03.webp", "w": 960, "h": 720}, {"src": "assets/img/adventures/ca-to-wa/04.webp", "w": 960, "h": 1280}, {"src": "assets/img/adventures/ca-to-wa/05.webp", "w": 960, "h": 1280}]) },
+      'ojai': { eyebrow: "Adventures", title: "Ojai, CA", total: 4, photos: GAL('adventures/ojai', [{"src": "assets/img/adventures/ojai/01.webp", "w": 960, "h": 640}, {"src": "assets/img/adventures/ojai/02.webp", "w": 960, "h": 1280}, {"src": "assets/img/adventures/ojai/03.webp", "w": 960, "h": 1280}, {"src": "assets/img/adventures/ojai/04.webp", "w": 960, "h": 640}]) },
+      'paso-robles': { eyebrow: "Adventures", title: "Paso Robles, CA", total: 4, photos: GAL('adventures/paso-robles', [{"src": "assets/img/adventures/paso-robles/01.webp", "w": 439, "h": 292}]) }
     };
 
     const s = this.state || {};
@@ -721,7 +721,7 @@ class Component extends DCLogic {
       counter: (idx + 1) + ' / ' + n,
       src: cur.src,
       alt: g.title + ', photo ' + (idx + 1) + ' of ' + n,
-      showing: 'Showing ' + n + ' of ' + g.total + ' photos',
+      showing: (n >= g.total ? n + ' photos' : 'Showing ' + n + ' of ' + g.total + ' photos'),
       hasMany: n > 1,
       thumbs: g.photos.map((p, i) => ({
         src: p.src,

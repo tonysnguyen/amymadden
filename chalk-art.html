@@ -406,7 +406,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
             <span class="fact-sep" aria-hidden="true">·</span>
             <span class="fact"><span class="fact-dot" style="background:#F39BB0;" aria-hidden="true"></span>9 pieces</span>
             <span class="fact-sep" aria-hidden="true">·</span>
-            <span class="fact"><img class="fact-medal" src="assets/img/award-medal.webp" alt="" aria-hidden="true">People’s Choice Award 2023</span>
+            <span class="fact"><img class="fact-medal" src="assets/img/shared/award-medal.webp" alt="" aria-hidden="true">People’s Choice Award 2023</span>
           </div>
         </div>
       </div>
@@ -431,7 +431,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
               <button class="tile {{p.tileCls}}" data-card="{{p.id}}" type="button" aria-expanded="{{p.expanded}}" aria-label="{{p.ariaLabel}}" onClick="{{p.toggle}}">
                 <span class="tile-media"><img loading="lazy" decoding="async" src="{{p.cover}}" alt="{{p.alt}}"></span>
                 <sc-if value="{{p.award}}" hint-placeholder-val="{{ false }}">
-                  <img loading="lazy" decoding="async" class="medal" src="assets/img/award-medal.webp" alt="" aria-hidden="true">
+                  <img loading="lazy" decoding="async" class="medal" src="assets/img/shared/award-medal.webp" alt="" aria-hidden="true">
                 </sc-if>
                 <span class="tile-cap">
                   <span class="tile-row">
@@ -522,7 +522,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
         </div>
         <div class="explore-grid">
           <a class="go-tile reveal" href="moments.html">
-            <span class="go-media"><img loading="lazy" decoding="async" src="assets/img/moments-card.jpg" alt="A captured moment from Amy's photo collection"></span>
+            <span class="go-media"><img loading="lazy" decoding="async" src="assets/img/moments/cover.jpg" alt="A captured moment from Amy's photo collection"></span>
             <span class="go-body">
               <span>
                 <span class="go-title" style="display:block;">Moments</span>
@@ -532,7 +532,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
             </span>
           </a>
           <a class="go-tile reveal" href="adventures.html">
-            <span class="go-media"><img loading="lazy" decoding="async" src="assets/img/adventures-card.webp" alt="A travel photo from Amy's adventures"></span>
+            <span class="go-media"><img loading="lazy" decoding="async" src="assets/img/adventures/vietnam-2017/cover.webp" alt="A travel photo from Amy's adventures"></span>
             <span class="go-body">
               <span>
                 <span class="go-title" style="display:block;">Adventures</span>
@@ -665,58 +665,58 @@ class Component extends DCLogic {
     return [
       { id: 'astronaut', title: 'Astronaut', year: '2024', when: 'July 2024', where: 'Downtown Hillsboro, OR',
         artists: 'Amy Madden', original: '', size: '10×10 ft', total: 26,
-        cover: 'assets/img/art-astronaut.webp',
+        cover: 'assets/img/chalk-art/astronaut/cover.webp',
         story: 'La Strada Chalk Art Festival in Downtown Hillsboro (summer 2024). The theme this year was “Yesterday’s Tomorrow.” High quality chalks from Mount Vision really helped this piece feel like velvet on the pavement.',
         links: [{ label: 'La Strada dei Pastelli Chalk Art Festival', href: 'https://tvcreates.org/lastrada/' }],
-        photos: ['assets/img/g-astronaut-01.webp', 'assets/img/g-astronaut-02.webp', 'assets/img/g-astronaut-03.webp', 'assets/img/g-astronaut-04.webp', 'assets/img/g-astronaut-05.webp', 'assets/img/g-astronaut-06.webp'] },
+        photos: GAL('chalk-art/astronaut', ['assets/img/chalk-art/astronaut/01.webp', 'assets/img/chalk-art/astronaut/02.webp', 'assets/img/chalk-art/astronaut/03.webp', 'assets/img/chalk-art/astronaut/04.webp', 'assets/img/chalk-art/astronaut/05.webp', 'assets/img/chalk-art/astronaut/06.webp']) },
       { id: 'velvet-cat', title: 'Velvet Cat', year: '2023', when: 'July 15 & 16, 2023', where: 'Downtown Hillsboro, OR',
         artists: 'Amy Madden & Naomi Duben', original: 'n/a', size: '10×10 ft', total: 60, award: true,
-        cover: 'assets/img/art-velvet-cat.webp',
+        cover: 'assets/img/chalk-art/velvet-cat/cover.webp',
         story: 'La Strada Chalk Art Festival in Downtown Hillsboro (summer 2023). The theme this year was “Creative Critters.” This piece was voted and won the “People’s Choice Award” in the 10x10 category. High quality black chalks from Mount Vision really helped this piece feel like velvet on the pavement. I completed the cat’s face/ears/small flowers and bottom fur.',
         links: [{ label: 'Hillsboro Herald — Winners!', href: 'https://www.instagram.com/p/Cux6CLoJrz9/' }],
-        photos: ['assets/img/gallery-vc-01.webp', 'assets/img/gallery-vc-02.webp', 'assets/img/gallery-vc-03.webp', 'assets/img/gallery-vc-04.webp', 'assets/img/gallery-vc-05.webp', 'assets/img/gallery-vc-06.webp', 'assets/img/gallery-vc-07.webp', 'assets/img/gallery-vc-08.webp', 'assets/img/gallery-vc-09.webp', 'assets/img/gallery-vc-10.webp', 'assets/img/gallery-vc-11.webp', 'assets/img/gallery-vc-12.webp'] },
+        photos: GAL('chalk-art/velvet-cat', ['assets/img/chalk-art/velvet-cat/01.webp', 'assets/img/chalk-art/velvet-cat/02.webp', 'assets/img/chalk-art/velvet-cat/03.webp', 'assets/img/chalk-art/velvet-cat/04.webp', 'assets/img/chalk-art/velvet-cat/05.webp', 'assets/img/chalk-art/velvet-cat/06.webp', 'assets/img/chalk-art/velvet-cat/07.webp', 'assets/img/chalk-art/velvet-cat/08.webp', 'assets/img/chalk-art/velvet-cat/09.webp', 'assets/img/chalk-art/velvet-cat/10.webp', 'assets/img/chalk-art/velvet-cat/11.webp', 'assets/img/chalk-art/velvet-cat/12.webp']) },
       { id: 'grapes', title: 'Grapes', year: '2018', when: 'June 2018', where: 'Downtown San Rafael, CA',
         artists: 'Amy Madden & Naomi Duben', original: 'Alphonse Mucha', size: '8×16 ft', total: 68,
-        cover: 'assets/img/art-grapes.webp',
+        cover: 'assets/img/chalk-art/grapes/cover.webp',
         story: 'Two day festival. I completed the top half of the image and Naomi did the bottom half. There were so many pieces of fruit to draw. lol Loved how smooth the face colors turned out.',
         links: [],
-        photos: ['assets/img/g-grapes-01.webp', 'assets/img/g-grapes-02.webp', 'assets/img/g-grapes-03.webp', 'assets/img/g-grapes-04.webp'] },
+        photos: GAL('chalk-art/grapes', ['assets/img/chalk-art/grapes/01.webp', 'assets/img/chalk-art/grapes/02.webp', 'assets/img/chalk-art/grapes/03.webp', 'assets/img/chalk-art/grapes/04.webp']) },
       { id: 'black-white-face', title: 'Black & White Face', year: '2013', when: 'June 2013', where: 'Downtown San Rafael, CA',
         artists: 'Amy Madden', original: 'Unknown', size: '6×8 ft', total: 15,
-        cover: 'assets/img/art-bw-face.jpg',
+        cover: 'assets/img/chalk-art/black-white-face/cover.jpg',
         story: 'Two day festival. Big challenge to complete a black and white piece as you are limited on color ranges and variance. It was a good challenge.',
         links: [{ label: 'Italian Street Painting Marin on Instagram', href: 'https://www.instagram.com/p/BfQ-IHLACMT/' }],
-        photos: ['assets/img/g-black-white-face-01.webp', 'assets/img/g-black-white-face-02.webp', 'assets/img/g-black-white-face-03.webp', 'assets/img/g-black-white-face-04.webp', 'assets/img/g-black-white-face-05.webp', 'assets/img/g-black-white-face-06.webp'] },
+        photos: GAL('chalk-art/black-white-face', ['assets/img/chalk-art/black-white-face/01.webp', 'assets/img/chalk-art/black-white-face/02.webp', 'assets/img/chalk-art/black-white-face/03.webp', 'assets/img/chalk-art/black-white-face/04.webp', 'assets/img/chalk-art/black-white-face/05.webp', 'assets/img/chalk-art/black-white-face/06.webp']) },
       { id: 'blue-bird', title: 'Bird', year: '2016', when: 'June 2016', where: 'Downtown San Rafael, CA',
         artists: 'Amy Madden & Naomi Duben', original: 'Unknown (stock photography)', size: '8×16 ft', total: 43,
-        cover: 'assets/img/art-bird.jpg',
+        cover: 'assets/img/chalk-art/bird/cover.jpg',
         story: 'One of our most popular pieces Naomi Duben and I have completed. This just came alive on the street with the bold and bright feathers. The blue colors really popped on the pavement. Maybe we should do a bird again?',
         links: [],
-        photos: ['assets/img/g-blue-bird-01.webp', 'assets/img/g-blue-bird-02.webp', 'assets/img/g-blue-bird-03.webp', 'assets/img/g-blue-bird-04.webp', 'assets/img/g-blue-bird-05.webp', 'assets/img/g-blue-bird-06.webp'] },
+        photos: GAL('chalk-art/bird', ['assets/img/chalk-art/bird/01.webp', 'assets/img/chalk-art/bird/02.webp', 'assets/img/chalk-art/bird/03.webp', 'assets/img/chalk-art/bird/04.webp', 'assets/img/chalk-art/bird/05.webp', 'assets/img/chalk-art/bird/06.webp']) },
       { id: 'flowers-beads', title: 'Flowers & Beads', year: '2018', when: 'July 2018', where: 'Downtown San Rafael, CA',
         artists: 'Amy Madden & Naomi Duben', original: 'Unknown (stock photography)', size: '8×16 ft', total: 26,
-        cover: 'assets/img/art-flowers-beads.jpg',
+        cover: 'assets/img/chalk-art/flowers-beads/cover.jpg',
         story: 'Two day weekend event. Naomi loves to do textures in pieces i.e. beads, embroidery, jewelry. This piece had it all! I took on the flowers and the face. The flowers and necklace took up so much time. Called in the troops to help us with the black border and background.',
         links: [],
-        photos: ['assets/img/g-flowerhead-01.webp', 'assets/img/g-flowerhead-02.webp', 'assets/img/g-flowerhead-03.webp', 'assets/img/g-flowerhead-04.webp', 'assets/img/g-flowerhead-05.webp', 'assets/img/g-flowerhead-06.webp'] },
+        photos: GAL('chalk-art/flowers-beads', ['assets/img/chalk-art/flowers-beads/01.webp', 'assets/img/chalk-art/flowers-beads/02.webp', 'assets/img/chalk-art/flowers-beads/03.webp', 'assets/img/chalk-art/flowers-beads/04.webp', 'assets/img/chalk-art/flowers-beads/05.webp', 'assets/img/chalk-art/flowers-beads/06.webp']) },
       { id: 'dog-fruit-nose', title: 'Dog Fruit Nose', year: '2021', when: 'August 2021', where: 'Cerritos Town Center, CA',
         artists: 'Amy Madden & Naomi Duben', original: 'Unknown (stock photography)', size: '5×5 ft', total: 34,
-        cover: 'assets/img/art-dog-fruit-nose.webp',
+        cover: 'assets/img/chalk-art/dog-fruit-nose/cover.webp',
         story: 'One day festival and it rained on us. We lost a couple of hours of drawing time and had to start over. Chalk and water don’t mix.',
         links: [],
-        photos: ['assets/img/g-dog-fruit-nose-01.webp', 'assets/img/g-dog-fruit-nose-02.webp', 'assets/img/g-dog-fruit-nose-03.webp', 'assets/img/g-dog-fruit-nose-04.webp', 'assets/img/g-dog-fruit-nose-05.webp', 'assets/img/g-dog-fruit-nose-06.webp'] },
+        photos: GAL('chalk-art/dog-fruit-nose', ['assets/img/chalk-art/dog-fruit-nose/01.webp', 'assets/img/chalk-art/dog-fruit-nose/02.webp', 'assets/img/chalk-art/dog-fruit-nose/03.webp', 'assets/img/chalk-art/dog-fruit-nose/04.webp', 'assets/img/chalk-art/dog-fruit-nose/05.webp', 'assets/img/chalk-art/dog-fruit-nose/06.webp']) },
       { id: 'dog-fish', title: 'Dog Fish', year: '2019', when: 'July 2019', where: 'Cerritos Town Center, CA',
         artists: 'Amy Madden & Naomi Duben', original: '', size: '5×5 ft', total: 6,
-        cover: 'assets/img/art-dog-fish.png',
+        cover: 'assets/img/chalk-art/dog-fish/cover.png',
         story: 'One day festival with children focused art creating activities. Went with something kid friendly for this piece.',
         links: [],
-        photos: ['assets/img/g-dog-fish-01.webp', 'assets/img/g-dog-fish-02.webp', 'assets/img/g-dog-fish-03.webp', 'assets/img/g-dog-fish-04.webp', 'assets/img/g-dog-fish-05.webp'] },
+        photos: GAL('chalk-art/dog-fish', ['assets/img/chalk-art/dog-fish/01.webp', 'assets/img/chalk-art/dog-fish/02.webp', 'assets/img/chalk-art/dog-fish/03.webp', 'assets/img/chalk-art/dog-fish/04.webp', 'assets/img/chalk-art/dog-fish/05.webp']) },
       { id: 'makeup-mask', title: 'Makeup Mask', year: '2015', when: 'June 2015', where: 'Downtown San Rafael, CA',
         artists: 'Amy Madden', original: 'Unknown (stock photography)', size: '6×8 ft', total: 18,
-        cover: 'assets/img/art-makeup-mask.jpg',
+        cover: 'assets/img/chalk-art/makeup-mask/cover.jpg',
         story: 'Theme was masks for 2015. These polka dots gave me a run for my money. Loved how the colors came out in this piece.',
         links: [{ label: 'Italian Street Painting Marin on Instagram', href: 'https://www.instagram.com/p/BTr1i_mF0Ye/' }],
-        photos: ['assets/img/g-make-up-mask-01.webp', 'assets/img/g-make-up-mask-02.webp', 'assets/img/g-make-up-mask-03.webp', 'assets/img/g-make-up-mask-04.webp', 'assets/img/g-make-up-mask-05.webp', 'assets/img/g-make-up-mask-06.webp'] }
+        photos: GAL('chalk-art/makeup-mask', ['assets/img/chalk-art/makeup-mask/01.webp', 'assets/img/chalk-art/makeup-mask/02.webp', 'assets/img/chalk-art/makeup-mask/03.webp', 'assets/img/chalk-art/makeup-mask/04.webp', 'assets/img/chalk-art/makeup-mask/05.webp', 'assets/img/chalk-art/makeup-mask/06.webp']) }
     ];
   }
 
@@ -768,7 +768,7 @@ class Component extends DCLogic {
         counter: (idx + 1) + ' / ' + n,
         src: openP.photos[idx],
         alt: openP.title + ', chalk art photo ' + (idx + 1) + ' of ' + n,
-        showing: 'Showing ' + n + ' of ' + openP.total + ' photos',
+        showing: (n >= openP.total ? n + ' photos' : 'Showing ' + n + ' of ' + openP.total + ' photos'),
         thumbs: openP.photos.map((src, i) => ({
           src,
           label: 'Photo ' + (i + 1),
