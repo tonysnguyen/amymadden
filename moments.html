@@ -350,6 +350,15 @@ a, button { -webkit-tap-highlight-color: transparent; }
   @keyframes gA { from { opacity: 0; translate: 0 12px; } }
   @keyframes gB { from { opacity: 0; translate: 0 12px; } }
 }
+
+/* ===== chapter cards: readable titles + Gear Head photo kept clear of the text ===== */
+.ch .ch-title { color: #FFFFFF; text-shadow: 0 1px 2px rgba(14,31,51,.6), 0 2px 18px rgba(14,31,51,.55); }
+.ch-scrim { background: linear-gradient(to top, rgba(14,31,51,.94) 0%, rgba(14,31,51,.74) 26%, rgba(14,31,51,.28) 52%, rgba(14,31,51,0) 72%); }
+.pg .ch.ch-fit-top { background: #173350; }
+.ch-fit-top .ch-media { bottom: 36%; }
+.ch-fit-top .ch-media::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 38%; background: linear-gradient(to bottom, rgba(23,51,80,0), #173350); pointer-events: none; }
+.ch-fit-top .ch-scrim { background: linear-gradient(to top, rgba(14,31,51,.55) 0%, rgba(14,31,51,0) 40%); }
+@media (max-width: 900px) { .ch-fit-top .ch-media { bottom: 40%; } }
 </style>
 <style>sc-if, sc-for { display: contents; } #dc-root:empty { min-height: 100vh; background: #F8FAFB; }</style>
 </head>
@@ -400,8 +409,8 @@ a, button { -webkit-tap-highlight-color: transparent; }
           <span class="ch-dot" aria-hidden="true"></span>
           <span class="ch-text"><span class="ch-title">Major Love</span><span class="ch-pill">Woof!<span class="n">24 photos</span></span></span>
         </button>
-        <button class="ch tile {{c.gear.cls}}" data-card="gear-head" style="order:3;" type="button" aria-expanded="{{c.gear.exp}}" onClick="{{c.gear.open}}">
-          <span class="ch-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/moments/gear-head/cover.png" alt="The 1971 Datsun 240z" style="object-position:center"></span>
+        <button class="ch tile ch-fit-top {{c.gear.cls}}" data-card="gear-head" style="order:3;" type="button" aria-expanded="{{c.gear.exp}}" onClick="{{c.gear.open}}">
+          <span class="ch-media"><img loading="lazy" decoding="async" class="zoom" src="assets/img/moments/gear-head/cover.png" alt="The 1971 Datsun 240z" style="object-position:28% 100%"></span>
           <span class="ch-scrim" aria-hidden="true"></span>
           <span class="ch-dot" aria-hidden="true"></span>
           <span class="ch-text"><span class="ch-title">Gear Head</span><span class="ch-pill">Vroom<span class="n">33 photos</span></span></span>
