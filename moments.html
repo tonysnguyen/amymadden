@@ -355,10 +355,11 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .ch .ch-title { color: #FFFFFF; text-shadow: 0 1px 2px rgba(14,31,51,.6), 0 2px 18px rgba(14,31,51,.55); }
 .ch-scrim { background: linear-gradient(to top, rgba(14,31,51,.94) 0%, rgba(14,31,51,.74) 26%, rgba(14,31,51,.28) 52%, rgba(14,31,51,0) 72%); }
 .pg .ch.ch-fit-top { background: #173350; }
-.ch-fit-top .ch-media { bottom: 36%; }
-.ch-fit-top .ch-media::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 38%; background: linear-gradient(to bottom, rgba(23,51,80,0), #173350); pointer-events: none; }
+.ch-fit-top .ch-media { overflow: hidden; background: #173350; }
+.ch-fit-top .ch-media img { display: block; height: 64%; }
+.ch-fit-top .ch-media::after { content: ""; position: absolute; left: 0; right: 0; top: 40%; bottom: 0; background: linear-gradient(to bottom, rgba(23,51,80,0) 0%, #173350 36%, #173350 100%); pointer-events: none; }
 .ch-fit-top .ch-scrim { background: linear-gradient(to top, rgba(14,31,51,.55) 0%, rgba(14,31,51,0) 40%); }
-@media (max-width: 900px) { .ch-fit-top .ch-media { bottom: 40%; } }
+@media (max-width: 900px) { .ch-fit-top .ch-media img { height: 60%; } .ch-fit-top .ch-media::after { top: 37%; background: linear-gradient(to bottom, rgba(23,51,80,0) 0%, #173350 34%, #173350 100%); } }
 </style>
 <style>sc-if, sc-for { display: contents; } #dc-root:empty { min-height: 100vh; background: #F8FAFB; }</style>
 </head>
