@@ -1,0 +1,116 @@
+/*
+ * Madden's Adventures shared styles: page basics, header, menu, footer and
+ * other pieces that look the same on every page. Edit here once.
+ * Colors, fonts, corners, shadows and motion come from tokens.css.
+ */
+a, button, input, textarea, select, label { touch-action: manipulation; }
+
+a, button { -webkit-tap-highlight-color: transparent; }
+
+.sh-hdr { position: sticky; top: 0; z-index: 40; background: rgba(var(--paper-rgb), .8); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(var(--navy-rgb), .10); view-transition-name: site-header; }
+
+.sh-in { max-width: 1240px; height: 56px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+
+.sh-logo { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-display); font-stretch: 75%; font-weight: 700; font-size: 19px; line-height: 1; letter-spacing: -0.01em; color: var(--navy); text-decoration: none; white-space: nowrap; }
+
+.sh-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--chalk); flex: none; }
+
+.sh-nav { display: flex; align-items: center; gap: 30px; }
+
+.sh-nav a[aria-current]::after { content: ""; position: absolute; left: 50%; top: calc(100% - 1px); width: 5px; height: 5px; margin-left: -2.5px; border-radius: 50%; background: var(--chalk); }
+
+.sh-r { display: flex; align-items: center; gap: 8px; }
+
+.sh-ic { width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: var(--navy); text-decoration: none; transition: background-color .2s ease; }
+
+.sh-cta { display: inline-flex; align-items: center; justify-content: center; height: 36px; padding: 0 18px; border-radius: var(--radius-pill); background: var(--blue); color: var(--white); font: 500 14px/1 var(--font-body); text-decoration: none; white-space: nowrap; transition: background-color .2s ease, transform .2s ease; }
+
+.sh-cta[aria-current] { background: var(--navy); }
+
+.sh-menu { display: none; position: relative; width: 44px; height: 44px; margin-right: -8px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--navy); cursor: pointer; }
+
+.sh-bar { position: absolute; left: 13px; width: 18px; height: 1.75px; border-radius: 2px; background: currentColor; transition: transform .34s var(--ease-out); }
+
+.sh-bar.b1 { top: 18.5px; }
+
+.sh-bar.b2 { top: 24px; }
+
+.sh-menu[aria-expanded="true"] .b1 { transform: translateY(2.75px) rotate(45deg); }
+
+.sh-menu[aria-expanded="true"] .b2 { transform: translateY(-2.75px) rotate(-45deg); }
+
+.sh-sheet { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .42s var(--ease-out); }
+
+.sh-sheet.is-open { grid-template-rows: 1fr; }
+
+.sh-sheet-in { min-height: 0; overflow: hidden; }
+
+.sh-sheet:not(.is-open) .sh-sheet-in { visibility: hidden; transition: visibility 0s .42s; }
+
+.sh-pad { max-width: 1240px; margin: 0 auto; padding: 4px clamp(16px, 4vw, 40px) 24px; max-height: calc(100dvh - 56px); overflow-y: auto; overscroll-behavior: contain; }
+
+.sh-links { display: flex; flex-direction: column; }
+
+.sh-links a svg { color: rgba(var(--navy-rgb), .4); flex: none; }
+
+.sh-links a span { display: inline-flex; align-items: center; gap: 10px; }
+
+.sh-links a[aria-current] span::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--chalk); }
+
+.sh-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 20px; }
+
+.sh-cta-lg { height: 44px; padding: 0 22px; font-size: 15px; }
+
+.sh-soc { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: var(--radius-pill); box-shadow: var(--ring-hairline); color: var(--navy); font: 500 14px/1 var(--font-body); text-decoration: none; }
+
+@media (max-width: 899px) { .sh-nav, .sh-r > .sh-cta { display: none; } .sh-menu { display: inline-flex; } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .sh-sheet.is-open .sh-links a, .sh-sheet.is-open .sh-row { animation: shIn .42s var(--ease-out) backwards; }
+  .sh-sheet.is-open .sh-links a:nth-child(2) { animation-delay: .03s; }
+  .sh-sheet.is-open .sh-links a:nth-child(3) { animation-delay: .06s; }
+  .sh-sheet.is-open .sh-links a:nth-child(4) { animation-delay: .09s; }
+  .sh-sheet.is-open .sh-links a:nth-child(5) { animation-delay: .12s; }
+  .sh-sheet.is-open .sh-row { animation-delay: .15s; }
+  @keyframes shIn { from { opacity: 0; translate: 0 -8px; } }
+}
+
+.sf { background: var(--navy); color: var(--line); padding: 72px 0 36px; }
+
+.sf-in { max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+
+.sf-top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px 32px; }
+
+.sf .sh-logo { color: var(--white); font-size: 22px; }
+
+.sf-line { margin: 0; font: 300 15px/1.5 var(--font-body); color: var(--line); }
+
+.sf-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 48px; }
+
+.sf-h { margin: 0 0 10px; font-family: var(--font-display); font-stretch: 75%; font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--white); }
+
+.sf-bot { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; margin-top: 48px; padding-top: 18px; border-top: 1px solid rgba(var(--white-rgb), .12); font: 400 13px/1.5 var(--font-body); }
+
+.sf-chalk { color: var(--chalk); }
+
+.sf-up { margin-left: auto; display: inline-flex; align-items: center; min-height: 44px; color: var(--white); font-weight: 500; text-decoration: none; }
+
+@media (max-width: 760px) { .sf-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+@view-transition { navigation: auto; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .pg-in { animation: pgIn .55s var(--ease-out) backwards; }
+  @keyframes pgIn { from { opacity: 0; translate: 0 10px; } }
+  ::view-transition-old(root) { animation: vtOut .2s ease both; }
+  ::view-transition-new(root) { animation: vtIn .36s var(--ease-out) both; }
+  @keyframes vtOut { to { opacity: 0; } }
+  @keyframes vtIn { from { opacity: 0; translate: 0 8px; } }
+}
+
+@media (prefers-reduced-motion: reduce) { ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; } }
+
+@media (hover: none) and (prefers-reduced-motion: no-preference) { .nx-card:active, .sh-cta:active, .sh-soc:active { transform: scale(.98); transition: transform .12s ease; } }
+
+#dc-root:empty { min-height: 100vh; background: var(--paper); }

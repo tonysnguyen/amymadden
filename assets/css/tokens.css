@@ -1,0 +1,71 @@
+/*
+ * Madden's Adventures design tokens.
+ * Every page reads its colors, fonts, motion, corners and shadows from here.
+ * Change a value below and the whole site updates.
+ */
+:root {
+  /* Colors */
+  --navy: #173350;        /* Main text, headings, dark panels */
+  --navy-deep: #0E1F33;   /* Deepest navy: footer, photo viewer, image shading */
+  --slate: #3F5873;       /* Secondary text and labels */
+  --chalk: #F6C453;       /* Chalk yellow accent: dots, highlights, focus rings */
+  --blue: #375CF0;        /* Buttons and links */
+  --blue-hover: #2546D0;  /* Button hover */
+  --paper: #F8FAFB;       /* Page background */
+  --mist: #EEF2F3;        /* Soft panels and section backgrounds */
+  --line: #C4D0DA;        /* Borders and dividers */
+  --line-soft: #DDE4E7;   /* Light borders */
+  --line-faint: #E3EAF0;  /* Faint fills */
+  --mint: #7FD1B9;        /* Accent: mint */
+  --pink: #F39BB0;        /* Accent: pink */
+  --error: #B42318;       /* Form errors */
+  --error-bg: #FEF3F2;    /* Form error background */
+  --white: #FFFFFF;       /* White */
+  /* The same colors as numbers, for see-through versions: rgba(var(--navy-rgb), .5) */
+  --navy-rgb: 23, 51, 80;
+  --navy-deep-rgb: 14, 31, 51;
+  --slate-rgb: 63, 88, 115;
+  --chalk-rgb: 246, 196, 83;
+  --blue-rgb: 55, 92, 240;
+  --blue-hover-rgb: 37, 70, 208;
+  --paper-rgb: 248, 250, 251;
+  --mist-rgb: 238, 242, 243;
+  --line-rgb: 196, 208, 218;
+  --line-soft-rgb: 221, 228, 231;
+  --line-faint-rgb: 227, 234, 240;
+  --mint-rgb: 127, 209, 185;
+  --pink-rgb: 243, 155, 176;
+  --error-rgb: 180, 35, 24;
+  --error-bg-rgb: 254, 243, 242;
+  --white-rgb: 255, 255, 255;
+
+  /* Fonts (loaded from Google Fonts in each page's <head>) */
+  --font-display: 'Archivo', sans-serif;  /* Headings, eyebrows, numbers */
+  --font-body: 'Poppins', sans-serif;  /* Body copy, buttons, labels */
+
+  /* Type scale */
+  --text-hero: clamp(52px, 7.2vw, 104px);  /* Home hero */
+  --text-h1: clamp(36px, 4.6vw, 64px);  /* Page titles */
+  --text-h2: 28px;  /* Section and card titles */
+  --text-lead: 19px;  /* Intro paragraphs */
+  --text-body: 16px;  /* Body copy */
+  --text-small: 14px;  /* Buttons, pills, captions */
+  --text-eyebrow: 13px;  /* Eyebrow labels (uppercase, .14em tracking) */
+
+  /* Corners */
+  --radius-pill: 999px;  /* Pills and round-ended buttons */
+  --radius-xl: 28px;  /* Large panels and photo walls */
+  --radius-lg: 22px;  /* Cards */
+  --radius-md: 14px;  /* Small cards, thumbnails */
+  --radius-sm: 10px;  /* Inputs and chips */
+
+  /* Shadows */
+  --shadow-card: 0 1px 1px rgba(var(--navy-rgb), .04), 0 18px 40px -18px rgba(var(--navy-rgb), .28);  /* Resting card */
+  --shadow-lift: 0 2px 4px rgba(var(--navy-rgb), .06), 0 30px 60px -22px rgba(var(--navy-rgb), .42);  /* Card lifted on hover */
+  --shadow-hover: 0 1px 1px rgba(var(--navy-rgb), .05), 0 28px 56px -20px rgba(var(--navy-rgb), .40);  /* Photo card on hover */
+  --ring-hairline: inset 0 0 0 1px rgba(var(--navy-rgb), .18);  /* Hairline outline for pills and fields */
+
+  /* Motion */
+  --ease-out: cubic-bezier(.2,.8,.2,1);  /* Default motion: quick start, soft landing */
+  --ease-in: cubic-bezier(.4,0,1,1);  /* Exits */
+}

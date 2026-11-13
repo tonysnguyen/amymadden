@@ -15,6 +15,8 @@ A plain static website (HTML, CSS and a little JavaScript), ready for GitHub Pag
 | `contact.html` | Contact form |
 | `404.html` | "Page not found" page (used by GitHub Pages) |
 | `assets/img/` | Every image the site uses, in folders by page and gallery (see **Images** below) |
+| `assets/css/tokens.css` | **Design tokens**: every color, font, corner, shadow and motion curve the site uses (see **Design system** below) |
+| `assets/css/site.css` | Styles every page shares: page basics, header, mobile menu, footer |
 | `assets/js/dc-lite.js` | Small script that renders each page from its template |
 | `assets/js/site-config.js` | Site settings (the contact form address) |
 | `assets/favicon.svg` | Browser tab icon |
@@ -47,6 +49,27 @@ then open http://localhost:8000 in your browser. (Opening the HTML files directl
 3. To use `maddenadventures.com`, add it under **Settings → Pages → Custom domain** and point the domain's DNS at GitHub Pages.
 
 The `404.html` page links back to `/`, which works with a custom domain or a `username.github.io` site.
+
+## Design system
+
+The whole site's look comes from one file, `assets/css/tokens.css`. Change a value there and every page updates:
+
+```css
+--navy: #173350;      /* main text, headings, dark panels */
+--chalk: #F6C453;     /* the chalk-yellow accent */
+--blue: #375CF0;      /* buttons and links */
+--font-display: 'Archivo', sans-serif;
+--radius-lg: 22px;    /* card corners */
+```
+
+- Colors: `--navy`, `--navy-deep`, `--slate`, `--chalk`, `--blue`, `--blue-hover`, `--paper`, `--mist`, `--line`, `--line-soft`, `--line-faint`, `--mint`, `--pink`, `--error`, `--error-bg`, `--white`.
+- Each color also has an `-rgb` version (`--navy-rgb: 23, 51, 80`) used for see-through shades. **If you change a color by hand, change its `-rgb` line to match.**
+- Fonts: `--font-display` (headings), `--font-body` (everything else). A new Google font also needs its `<link>` in each page's `<head>`.
+- Corners: `--radius-pill`, `--radius-xl`, `--radius-lg`, `--radius-md`, `--radius-sm`. Shadows: `--shadow-card`, `--shadow-lift`, `--shadow-hover`, `--ring-hairline`. Motion: `--ease-out`, `--ease-in`.
+
+The same tokens, with usage notes and component examples, live in the **Madden's Adventures** design system in Claude, and the design canvas uses them too. Change a value there and ask Claude to sync, and the website files and the canvas are updated to match.
+
+Header, mobile menu and footer styles are in `assets/css/site.css`, shared by every page.
 
 ## Editing the site
 
